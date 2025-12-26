@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WanderLuxeTrips — Explore the World & Incredible India</title>
+  <meta name="description" content="WanderLuxeTrips — premium travel site showcasing global and Indian destinations. Affiliate bookings via Booking.com." />
+  <style>
+    :root{
+      --teal:#0fb4a2; --teal-dark:#0a8273; --bg:#ffffff; --card:#f7fbfb;
+      --muted:#6b7280; --text:#042a2a; --accent:var(--teal);
+    }
+    [data-theme='dark']{
+      --bg:#042026; --card:#062b2a; --muted:#9fb3b0; --text:#e6f6f4;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+    header{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--teal),#6fe3d1);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff}
+    h1{margin:0;font-size:20px}
+    .tag{font-size:12px;color:var(--muted)}
+    nav{display:flex;gap:10px;align-items:center}
+    nav a{color:var(--text);text-decoration:none;padding:8px 10px;border-radius:8px}
+    .cta{background:var(--accent);color:white;font-weight:700}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:20px;align-items:center;margin-top:18px}
+    .hero-card{padding:18px;border-radius:12px;background:linear-gradient(180deg,var(--card),transparent)}
+    .hero-right img{width:100%;height:260px;object-fit:cover;border-radius:12px;box-shadow:0 10px 30px rgba(15,180,162,0.12)}
+    .lead{color:var(--muted);margin-top:8px}
+    .search-row{display:flex;gap:8px;margin-top:12px}
+    .search-row input,.search-row select{padding:10px;border-radius:10px;border:1px solid rgba(2,6,5,0.06);flex:1}
+    .btn{background:var(--teal-dark);color:white;padding:10px 14px;border:none;border-radius:10px;cursor:pointer}
+
+    section{margin-top:24px}
+    h2{margin:6px 0 6px 0}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:12px}
+    .card{background:var(--card);padding:10px;border-radius:12px;border:1px solid rgba(2,6,5,0.03)}
+    .card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+    .meta{display:flex;justify-content:space-between;color:var(--muted);font-size:13px;margin-top:8px}
+
+    .tours{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+    .tour{display:flex;gap:12px;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg,transparent, rgba(2,6,5,0.02))}
+    .tour img{width:160px;height:96px;object-fit:cover;border-radius:8px}
+    .book-btn{display:inline-block;padding:8px 12px;border-radius:8px;background:var(--accent);color:#fff;font-weight:700;text-decoration:none}
+
+    .contact-form{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    .contact-form input,.contact-form textarea{padding:10px;border-radius:8px;border:1px solid rgba(2,6,5,0.06);background:white;color:var(--text)}
+    footer{display:flex;justify-content:space-between;align-items:center;padding:18px 0;margin-top:24px;border-top:1px solid rgba(2,6,5,0.06)}
+    .muted{color:var(--muted);font-size:13px}
+
+    .link-btn {
+      background: none;
+      border: none;
+      color: teal;
+      cursor: pointer;
+      font-weight: 600;
+      padding: 0;
+    }
+    .link-btn:hover {
+      text-decoration: underline;
+    }
+
+
+    @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero-right img{height:200px}}
+    @media(max-width:640px){.grid{grid-template-columns:1fr}.contact-form{grid-template-columns:1fr}.main-nav{display:none}}
+  </style>
+</head>
+<body data-theme="light">
+  <div class="wrap">
+    <header>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+      <div class="brand">                                                                                                                                          
+        <div class="logo">WL</div>                                                                                                                                                                                                                                                           
+        <div>
+          <h1>WanderLuxeTrips</h1>
+          <div class="tag">Explore the world in style</div>
+        </div>
+      </div>
+
+      <nav class="main-nav">
+        <a href="#dest">Destinations</a>
+        <a href="#india">Incredible India</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="cta" id="bookTopBtn" href="#">Book</a>
+        <button id="themeToggle" aria-label="Toggle theme">🌗</button>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div style="color:var(--muted);font-weight:700">Discover</div>
+        <h2>Luxury travel, curated for you</h2>
+        <p class="lead">WanderLuxeTrips showcases top global destinations and India’s finest spots. Click Book Now to go to Booking.com (affiliate link) — Booking.com manages bookings & payments.</p>
+
+        <div class="search-row" role="search" aria-label="Search destinations">
+          <input id="q" placeholder="Search destinations or experiences" />
+          <select id="regionFilter"><option value="all">All regions</option><option value="asia">Asia</option><option value="europe">Europe</option><option value="americas">Americas</option><option value="africa">Africa</option><option value="oceania">Oceania</option><option value="india">India</option></select>
+          <button id="searchBtn" class="btn">Search</button>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop" alt="Travel hero">
+      </div>
+    </section>
+
+    <!-- Worldwide destinations -->
+    <section id="dest">
+      <h2>Top Worldwide Destinations</h2>
+      <div class="grid" id="destGrid"></div>
+    </section>
+
+    <!-- India section -->
+    <section id="india">
+      <h2>Incredible India — Top Destinations</h2>
+      <div class="grid" id="indiaGrid"></div>
+    </section>
+
+    <section id="about">
+      <h2>About WanderLuxeTrips</h2>
+      <p style="color:var(--muted)">WanderLuxeTrips helps travellers discover premium destinations worldwide and in India. We use Booking.com affiliate links for bookings — we earn a small commission if you book through our links. Booking, payment and support are handled securely by Booking.com.</p>
+    </section>
+
+    <section id="tours">
+      <h2>Featured Examples</h2>
+      <div id="tourList" class="tours"></div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Reviews</h2>
+      <p style="color:var(--muted)">Have feedback or partnership ideas? Use the form below. (Bookings are handled by Booking.com.)</p>
+      <!-- Replace FORM_ENDPOINT with your Formspree endpoint -->
+      <form id="contactForm" action="https://formspree.io/f/FORM_ENDPOINT" method="POST" class="contact-form">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" type="email" placeholder="Your email" required>
+        <textarea name="message" rows="4" placeholder="Message" required></textarea>
+        <button class="btn" type="submit">Send message</button>
+      </form>
+    </section>
+
+    <footer>
+      <div>
+        <strong>WanderLuxeTrips</strong>
+        <div class="muted">Explore responsibly • Book with confidence</div>
+      </div>
+      <div style="text-align:right">
+        <div class="muted">© <span id="year"></span> WanderLuxeTrips</div>
+        <div style="margin-top:6px">
+          <a href="#" aria-label="Instagram">IG</a> &nbsp; <a href="#" aria-label="YouTube">YT</a> &nbsp; <a href="#" aria-label="WhatsApp">WA</a>
+        </div>
+      </div>
+    </footer>                                                                                                                                           
+  </div>
+
+<script>
+  // Replace with your Travelpayouts or Booking.com affiliate link when ready.
+  // Travelpayouts sample will look like: https://tp.media/r?marker=XXXX&p=booking.com
+  const AFFILIATE_BASE = 'https://www.booking.com/?aid=YOUR_AID_HERE';
+
+  // Worldwide destinations (25)
+  const destinations = [
+    {id:1,name:'Paris, France',region:'europe',tag:'Art, cafés & romance',img:'https://media.istockphoto.com/id/2151954540/photo/view-of-paris-with-eiffel-tower.webp?a=1&b=1&s=612x612&w=0&k=20&c=o9f8Wu0PwgG_kNqjmhsxktpn5QguSzbWqRv1mtesk4A='},
+    {id:2,name:'Bali, Indonesia',region:'asia',tag:'Temples & surf',img:'https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&w=1200&auto=format&fit=crop'},
+    {id:3,name:'Tokyo, Japan',region:'asia',tag:'Neon cities & culture',img:'https://s.yimg.com/ny/api/res/1.2/jvkzkQLZ51wXmHswNTiktg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD04MDA-/https://s.yimg.com/os/creatr-uploaded-images/2021-07/59a4bc60-f23c-11eb-bf75-c38993010fb7'},
+    {id:4,name:'New York, USA',region:'americas',tag:'The city that never sleeps',img:'https://cdn-imgix.headout.com/media/images/7ddd98be-eff9-4df8-858f-f62c619bc37d-1748879325106-280758.jpg?w=1302&h=813.75&crop=faces&auto=compress%2Cformat&fit=min'},
+    {id:5,name:'Santorini, Greece',region:'europe',tag:'Cliffs & sunsets',img:'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?q=80&w=1200&auto=format&fit=crop'},
+    {id:6,name:'Maldives',region:'asia',tag:'Overwater villas & coral',img:'https://cdn.wallpapersafari.com/60/43/1WLM8f.jpg'},
+    {id:7,name:'Dubai, UAE',region:'asia',tag:'Skyscrapers & desert',img:'https://www.wiki-vakantie.nl/wp-content/uploads/2014/12/Burj-Khalifa-Dubai.jpg'},
+    {id:8,name:'Rome, Italy',region:'europe',tag:'Ruins & cuisine',img:'https://media.istockphoto.com/photos/colosseum-in-rome-with-morning-sun-picture-id1290101405?k=20&m=1290101405&s=612x612&w=0&h=kBLPgnSgvfbbc6zsu9Ra8yz9brxEF6jRN12FdxUt-SA='},
+    {id:9,name:'Sydney, Australia',region:'oceania',tag:'Opera House & beaches',img:'https://cdn.britannica.com/96/100196-050-C92064E0/Sydney-Opera-House-Port-Jackson.jpg'},
+    {id:10,name:'Cape Town, South Africa',region:'africa',tag:'Table Mountain & coast',img:'https://cdn.wallpapersafari.com/87/48/gBlC5R.jpg'},
+    {id:11,name:'Machu Picchu, Peru',region:'americas',tag:'Ancient citadel & trails',img:'https://i1.wp.com/www.godsavethepoints.com/wp-content/uploads/2019/01/69537192_m.jpg?ssl=1'},
+    {id:12,name:'Grand Canyon, USA',region:'americas',tag:'Canyons & viewpoints',img:'https://th.bing.com/th/id/R.8e1bb8e5bcc1327ba0e87c4683dd8409?rik=F0e%2fC%2fA6BWrZvg&riu=http%3a%2f%2ffoundtheworld.com%2fwp-content%2fuploads%2f2016%2f01%2fGrand-Canyon-5.jpg&ehk=3t5U%2fBKFVWbr0wz6%2fOYWJILeRz1q1u1hevb%2fF%2b0R8YI%3d&risl=&pid=ImgRaw&r=0'},
+    {id:13,name:'Rio de Janeiro, Brazil',region:'americas',tag:'Beaches & carnival',img:'https://iugs-geoheritage.org/wp-content/uploads/2022/07/079-1_The-Sugar-Loaf-monolith-of-Rio-de-Janeiro.jpg'},
+    {id:14,name:'Zanzibar, Tanzania',region:'africa',tag:'Spice islands & beaches',img:'https://peakvisor.com/photo/Tanzania-Zanzibar-Island-aerial.jpg'},
+    {id:15,name:'Iceland',region:'europe',tag:'Glaciers & waterfalls',img:'https://thumbs.dreamstime.com/b/glaciers-waterfalls-landscapes-iceland-lakes-132553929.jpg'},
+    {id:16,name:'New Zealand',region:'oceania',tag:'Fiords & trekking',img:'https://i0.wp.com/wattsupwiththat.com/wp-content/uploads/2017/02/franz-josef-glacier.jpg?fit=1200%2C857&ssl=1'},
+    {id:17,name:'Agra, India',region:'asia',tag:'Home of the Taj Mahal',img:'https://assets.editorial.aetnd.com/uploads/2011/06/taj-mahal-gettyimages-463924915.jpg'},
+    {id:18,name:'Goa, India',region:'asia',tag:'Sandy beaches & nightlife',img:'https://voiceofadventure.com/wp-content/uploads/2022/06/60d0813807aff-Baga_Beach_In_Goa.jpg'},
+    {id:19,name:'Kerala Backwaters, India',region:'asia',tag:'Houseboats & spices',img:'https://www.scientiaeducare.com/wp-content/uploads/2017/03/7.gif'},
+    {id:20,name:'Leh-Ladakh, India',region:'asia',tag:'High passes & stark landscapes',img:'https://discoverlehladakh.in/wp-content/uploads/2020/03/Leh-Palace-Ladakh-in-winters.jpg'},
+    {id:21,name:'Bangkok, Thailand',region:'asia',tag:'Temples & street food',img:'https://assets.traveltriangle.com/blog/wp-content/uploads/2020/02/Grand-Palace_1st-feb.jpeg'},
+    {id:22,name:'China',region:'asia',tag:'Great Wall & culture',img:'https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/01/31125950/History-Great-Wall-Of-China-.jpg'},
+    {id:23,name:'London, UK',region:'europe',tag:'History & theatre',img:'https://static.wixstatic.com/media/055d90_f3846caa5b92491f9e1d398770e7b7f9~mv2.jpeg/v1/fill/w_1000,h_587,al_c,q_85,usm_0.66_1.00_0.01/055d90_f3846caa5b92491f9e1d398770e7b7f9~mv2.jpeg'},
+    {id:24,name:'Barcelona, Spain',region:'europe',tag:'Gaudí & beaches',img:'https://www.tripsavvy.com/thmb/8VKOZbYhKRecUgdgmwfKsFlw2f8=/4208x2366/filters:fill(auto,1)/spain--barcelona--panoramic-view-of-barcelona-cathedral-735895859-599aedf7685fbe0010120fc1.jpg'},
+    {id:25,name:'Venice, Italy',region:'europe',tag:'Canals & art',img:'https://www.meganstarr.com/wp-content/uploads/2022/11/Venice-Grand-Canal_1913273623.jpg'},
+    {id:26,name:'Mauriitius',region:'africa',tag:'Beaches & reefs',img:'https://tse3.mm.bing.net/th/id/OIP.41l8FPKtNSggBEV8lR5hHAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:27,name:'Swiss Alps, Switzerland',region:'europe',tag:'Mountains & skiing',img:'https://s1.it.atcdn.net/wp-content/uploads/2015/11/shutterstock_279572969.jpg'},
+    {id:28,name:'Muscat, Oman',region:'asia',tag:'Desert & beaches',img:'https://www.tripsavvy.com/thmb/jrV3g4LlaRu5yQAMQDpSwMesvyU=/2121x1414/filters:fill(auto,1)/high-angle-view-of-buildings-and-mountains-against-sky-1140091049-dede8b4f2d36497e8e971e9bdf0ce1d3.jpg'},
+    {id:29,name:'Behrain',region:'asia',tag:'Islands & culture',img:'https://www.experiencedtravellers.com/wp-content/uploads/2021/04/Bharain-2.jpeg'},
+    {id:30,name:'Qatar',region:'asia',tag:'Desert & modernity',img:'https://a.travel-assets.com/findyours-php/viewfinder/images/res70/481000/481987-Doha-And-Vicinity.jpg?impolicy=fcrop&w=1040&h=580&q=mediumHigh'},
+    {id:31,name:'kuwait',region:'asia',tag:'City & culture',img:'https://familytravelgenie.com/media/wp-uploads/2022/01/02-4.jpg'},
+    {id:32,name:'Egypt',region:'africa',tag:'Pyramids & Nile',img:'https://www.tripsavvy.com/thmb/-tzBp8Gy4A2v7-XK07TYecZXWfk=/2286x1311/filters:fill(auto,1)/GettyImages-200478089-001-06db86e7b540494a807a46af6c6c7f11.jpg'},
+    {id:33,name:'Turkey',region:'europe',tag:'History & landscapes',img:'https://lh6.googleusercontent.com/QnGDEdVRff4_Zx4ozlaiOugNNTd0m4rj3TwOB5K4S4lqNsZLgn9dPOBrMGLr5cpyNfaKNx2HjR06Tfs7umy5d3jVKX-t0f86dAAM5CylPbAOac_cNSZxj80A7u_lH84WUGB9XNDf'},
+    {id:34,name:'Greece',region:'europe',tag:'Islands & ruins',img:'https://lp-cms-production.imgix.net/2019-06/GettyImages-188066509_super%20.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4'},
+    {id:35,name:'Portugal',region:'europe',tag:'Coast & culture',img:'https://www.travelandleisure.com/thmb/t7LUbPYWRDe_itXi0c9mmS4OYMc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-azenhas-do-mar-portugal-PRTGREECE0922-1b53ba0a4b4c4eef999ae4190f7981cd.jpg'},
+    {id:36,name:'Netherlands',region:'europe',tag:'Canals & tulips',img:'https://broganabroad.com/wp-content/uploads/2020/05/Leiden-Netherlands.jpg'},
+    {id:37,name:'Belgium',region:'europe',tag:'Chocolate & architecture',img:'https://deih43ym53wif.cloudfront.net/grand-place-brussels-belgium-shutterstock_286144574_a963734c9e.jpeg'},
+    {id:38,name:'Austria',region:'europe',tag:'Alps & culture',img:'https://supercurioso.com/wp-content/uploads/2019/02/hallstatt-mountain-village-in-the-alps-salzkammergut-austria-picture-id619638160.jpg'},
+    {id:39,name:'Czech Republic',region:'europe',tag:'Castles & beer',img:'https://deih43ym53wif.cloudfront.net/cesky-krumlov-czech-republic-shutterstock_1045819525_1ee4bcaf51.jpeg'},
+    {id:40,name:'Malaysia',region:'asia',tag:'Cities & islands',img:'https://aseanup.com/wp-content/uploads/2018/07/kuala-lumpur-view-petronas-towers-at-dusk.jpg'},
+    {id:41,name:'Singapore',region:'asia',tag:'Urban oasis & cuisine',img:'https://static2.tripoto.com/media/filter/tst/img/OgData/1510036427_gettyimages_541351163_super_fotor.jpg'},
+    {id:42,name:'Vietnam',region:'asia',tag:'Halong Bay & culture',img:'https://blog.chapkadirect.es/wp-content/uploads/2022/09/mejores-cosas-que-ver-vietnam-scaled.jpeg'},
+    {id:43,name:'South Korea',region:'asia',tag:'Seoul & traditions',img:'https://www.tripsavvy.com/thmb/UPIbBw9j7Us9pvnpkuaGGK0cbh0=/2120x1414/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1140551641-15a351728abc4577bcd95764c95d242c.jpg'},
+    {id:44,name:'Thailand',region:'asia',tag:'Beaches & temples',img:'https://tse1.mm.bing.net/th/id/OIP.s-YYwqoCAQwjWeFEbVU6uAHaE7?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:45,name:'Nepal',region:'asia',tag:'Himalayas & culture',img:'https://tse3.mm.bing.net/th/id/OIP.v_gpVfUkw1880VGAlJXbeAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:46,name:'Bhutan',region:'asia',tag:'Mountains & monasteries',img:'https://d1bv4heaa2n05k.cloudfront.net/posts/SbE6YWiRDDLJedZFy/1508759910474-shutterstock_614234582.jpg'},
+    {id:47,name:'Sri Lanka',region:'asia',tag:'Beaches & heritage',img:'https://tse4.mm.bing.net/th/id/OIP.zN1vkKy1YHDEdw8TBEI3pwHaFj?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:48,name:'Philippines',region:'asia',tag:'Islands & reefs',img:'https://handluggageonly.co.uk/wp-content/uploads/2018/12/Hand-Luggage-Only-10-5.jpg'},
+    {id:49,name:'Cambodia',region:'asia',tag:'Angkor Wat & culture',img:'https://deih43ym53wif.cloudfront.net/bayon-temple-angkor-thom-cambodia-shutterstock_339593069-2_1cab50c197.jpeg'},
+    {id:50,name:'Laos',region:'asia',tag:'Rivers & temples',img:'https://tse3.mm.bing.net/th/id/OIP.7NvhzO3PYefnY-bWCmDpAgHaE8?w=1600&h=1067&rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:51,name:'UAE',region:'asia',tag:'Desert & luxury',img:'https://www.timeoutdubai.com/cloud/timeoutdubai/2021/09/10/9UjCq482-dubai-uae.jpg'},
+    {id:52,name:'Jordan',region:'asia',tag:'Petra & desert',img:'https://www.mostresource.org/wp-content/uploads/sites/146/2016/12/Jordan.jpeg'},
+    {id:53,name:'Saudi Arabia',region:'asia',tag:'Desert & culture',img:'https://tse1.mm.bing.net/th/id/OIP.UehiVn3XbPNEveF8JaYpwQHaEd?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:54,name:'Morocco',region:'africa',tag:'Markets & deserts',img:'https://wander-lush.org/wp-content/uploads/2022/12/Most-beautiful-places-in-Morocco-DP-Ait-Benhaddou.jpg'},
+    {id:55,name:'Kenya',region:'africa',tag:'Safaris & wildlife',img:'https://www.sojournsafaris.co.ke/wp-content/uploads/2019/05/NNP.jpg'},
+    {id:56,name:'Tanzania',region:'africa',tag:'Serengeti & Kilimanjaro',img:'https://cdn.thecrazytourist.com/wp-content/uploads/2017/02/Serengeti-National-Park.jpg'},
+    {id:57,name:'Ghana',region:'africa',tag:'Culture & coast',img:'https://tse4.mm.bing.net/th/id/OIP.7-4MgRY9QuW4ZOA28oRyqQHaFE?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:58,name:'Senegal',region:'africa',tag:'Music & beaches',img:'https://th.bing.com/th/id/R.e6497c172a1fd6e88112e7b087a0e650?rik=ob7tUayxFf%2bI3A&riu=http%3a%2f%2fwww.nationsonline.org%2fgallery%2fSenegal%2fPointe-des-Almadies-Senegal.jpg&ehk=rw5dIHAN4JA%2bcvCzGu9VV3TcZp5dt4fO9kgXoSxrZbA%3d&risl=&pid=ImgRaw&r=0'},
+    {id:59,name:'Croatia',region:'europe',tag:'Coast & history',img:'https://lp-cms-production.imgix.net/2020-11/GettyRF_598163608.jpg?auto=format&fit=crop&sharp=10&vib=20&ixlib=react-8.6.4&w=850&q=35&dpr=3'},
+    {id:60,name:'Slovenia',region:'europe',tag:'Lakes & castles',img:'https://tse4.mm.bing.net/th/id/OIP.OwQKkHs2exEm711spA_yWgHaEU?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:61,name:'Hungary',region:'europe',tag:'Thermal baths & architecture',img:'https://th.bing.com/th/id/R.2baa3afd49ec36bab4c3bc84af58424b?rik=rkZORGHThc0aOw&riu=http%3a%2f%2fwww.wallpaperbetter.com%2fwallpaper%2f175%2f236%2f1013%2fbudapest-hungary-river-danube-parliament-buildings-lights-evening-1080P-wallpaper.jpg&ehk=5C2OCFrz9miqeo0rzmpGoFVY%2bzehVO%2fhlocEqM1opIc%3d&risl=&pid=ImgRaw&r=0'},
+    {id:62,name:'Poland',region:'europe',tag:'History & culture',img:'https://handluggageonly.co.uk/wp-content/uploads/2016/10/Moszna-Castle-2.jpg'},
+    {id:63,name:'Sweden',region:'europe',tag:'Archipelago & design',img:'https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ih5VShVxbe1s/v1/-1x-1.webp'},
+    {id:64,name:'Norway',region:'europe',tag:'Fjords & northern lights',img:'https://globalgrasshopper.com/wp-content/uploads/2014/06/most-beautiful-places-to-visit-in-Norway-1.jpg'},
+    {id:65,name:'Denmark',region:'europe',tag:'Hygge & castles',img:'https://th.bing.com/th/id/R.3227d8325738037bbd8e6dabc7c96782?rik=jcoRr2MsuEEBxw&riu=http%3a%2f%2fhandluggageonly.co.uk%2fwp-content%2fuploads%2f2016%2f02%2fDenmark-17.jpg&ehk=7QIvWibVjtnBiC7T04KetYQ3%2f0ge5fWjzYtj9NE5C58%3d&risl=&pid=ImgRaw&r=0'},
+    {id:66,name:'Finland',region:'europe',tag:'Lakes & saunas',img:'https://i.natgeofe.com/n/81cf55d9-8f0d-4bd7-a69f-9dd17186ed87/helsinki-finland.jpg'},
+    {id:67,name:'Istanbul, Turkey',region:'europe',tag:'Bridges & bazaars',img:'https://wallpaperaccess.com/full/469631.jpg'},
+    {id:69,name:'Slovakia',region:'europe',tag:'Mountains & castles',img:'https://tse2.mm.bing.net/th/id/OIP.SNdeQIlMbP1gk8WHar8G4AHaE7?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:70,name:'Montenegro',region:'europe',tag:'Coast & mountains',img:'https://cdn.urlaubsguru.at/wp-content/uploads/2017/03/kotor-in-a-beautiful-summer-day-montenegro-shutterstock_526676119.jpg'},
+    {id:72,name:'Tunisia',region:'africa',tag:'Desert & medina',img:'https://gonetravelling.co.uk/wp-content/uploads/2017/09/tunisia-2425441_1920.jpg'},
+    {id:74,name:'Uganda',region:'africa',tag:'Gorillas & lakes',img:'https://www.fodors.com/wp-content/uploads/2019/08/BucketListUganda__HERO_shutterstock_1051664126.jpg'},
+    {id:75,name:'Rwanda',region:'africa',tag:'Gorillas & hills',img:'https://www.wendywutours.com/resource/upload/3096/day-4-rwanda.jpg'},
+    {id:76,name:'Zambia',region:'africa',tag:'Victoria Falls & safaris',img:'https://miviaje.com/wp-content/uploads/2019/01/cataratas-victoria-zambia.jpg'},
+    {id:77,name:'Zimbabwe',region:'africa',tag:'Wildlife & waterfalls',img:'https://www.travelrepublicafrica.com/wp-content/uploads/2017/10/zimbabwe-1.jpg'},
+    {id:78,name:'Namibia',region:'africa',tag:'Deserts & wildlife',img:'https://cdn.britannica.com/80/141580-050-E96B1D0C/Namib-desert-Namibia.jpg'},
+    {id:79,name:'Botswana',region:'africa',tag:'Deltas & safaris',img:'https://www.worldatlas.com/r/w1200/upload/f7/f6/5f/okavango-delta-botswana.jpg'},
+    {id:80,name:'Madagascar',region:'africa',tag:'Unique wildlife & beaches',img:'https://th.bing.com/th/id/R.d67e4b77f691e4b8451c02493a7ee802?rik=%2fABplNFmqRsU4g&riu=http%3a%2f%2fwww.madagascar.io%2fimages%2fmadagascar-baobab-trees.jpg&ehk=ijyaKdd7bvfIkmWbPeSPcG0uang%2b%2fMxzED%2fxZvwsBzo%3d&risl=&pid=ImgRaw&r=0'},
+    {id:82,name:'Seychelles',region:'africa',tag:'Islands & luxury',img:'https://a.cdn-hotels.com/gdcs/production57/d321/dca365de-4415-4f73-a44e-c1e5e2f25f3a.jpg'},
+    {id:83,name:'Ethiopia',region:'africa',tag:'History & landscapes',img:'https://cdn1.matadornetwork.com/blogs/1/2021/01/Ethiopia-landscape-7.jpg'},
+    {id:84,name:'Gabon',region:'africa',tag:'Rainforests & wildlife',img:'https://www.state.gov/wp-content/uploads/2018/11/Gabon-e1555939779765-2500x1406.jpg'},
+    {id:85,name:'Angola',region:'africa',tag:'Wildlife & culture',img:'https://tse3.mm.bing.net/th/id/OIP.sypUMr2cxdJeQSuKcirnhAHaEk?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:86,name:'Cabo Verde',region:'africa',tag:'Islands & culture',img:'https://i0.wp.com/elsolnewsmedia.com/wp-content/uploads/2018/11/cabo-verde.jpg?resize=1605%2C1070'},
+    {id:87,name:'Malawi',region:'africa',tag:'Lakes & wildlife',img:'https://res-1.cloudinary.com/enchanting/et-web/2017/05/Enchanting-Travels-Malawi-Tours-Lake-Malawi-Beach-.jpg'},
+    {id:88,name:'Mozambique',region:'africa',tag:'Beaches & culture',img:'https://timbuktutravel.imgix.net/2017/06/beguerra-island-scenic-flight-mozambique.jpg?auto=compress%2Cformat&ixlib=php-1.1.0&q=50'},
+    {id:89,name:'Togo',region:'africa',tag:'Culture & coast',img:'https://lp-cms-production.imgix.net/2019-06/GettyImages-475448160_high.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4'},
+    {id:90,name:'Benin',region:'africa',tag:'History & culture',img:'https://www.worldatlas.com/r/w1200/upload/04/3f/7a/shutterstock-1383820007.jpg'},
+    {id:91,name:'Burkina Faso',region:'africa',tag:'Culture & landscapes',img:'https://www.state.gov/wp-content/uploads/2018/11/Burkina-Faso-e1555940515119-2500x1406.jpg'},
+    {id:92,name:'Fiji',region:'oceania',tag:'Islands & reefs',img:'https://www.turtlefiji.com/wp-content/uploads/2020/11/Hero_1230x769_Turtle-Island-Fiji-1.jpg'},
+    {id:93,name:'Samoa',region:'oceania',tag:'Beaches & culture',img:'https://lp-cms-production.imgix.net/2019-06/102868659.jpg?auto=format&fit=crop&vib=20&sharp=10&ixlib=react-8.6.4'},
+    {id:94,name:'Papua New Guinea',region:'oceania',tag:'Tribes & nature',img:'https://travelshelper.com/wp-content/uploads/2021/09/Papua-New-Guinea-travel-guide-Travel-S-helper.jpg'},
+  ];
+
+  // Incredible India (15)
+  const indiaList = [
+    {id:167,name:'Arunachal Pradesh, India',region:'asia', tag:'Mountains & tribes',img:'https://s3.india.com/wp-content/uploads/2024/05/Feature-Image_-Tawang.jpg##image/jpg'},
+    {id:101,name:'Jaipur, Rajasthan',region:'asia', tag:'Palaces & pink city',img:'https://tse1.explicit.bing.net/th/id/OIP.cDslVdR-BErEVq__0D2HZwHaFu?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:102,name:'Manali, Himachal',region:'asia', tag:'Mountains & adventures',img:'https://assets.traveltriangle.com/blog/wp-content/uploads/2019/08/og-for-winter-in-manali.jpg'},
+    {id:103,name:'Shimla, Himachal',region:'asia', tag:'Colonial charm & pines',img:'https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop'},
+    {id:104,name:'Rishikesh, Uttarakhand',region:'asia', tag:'Yoga & river rafting',img:'https://wallpapercave.com/wp/wp7372554.jpg'},
+    {id:105,name:'Darjeeling, West Bengal',region:'asia', tag:'Tea gardens & sunrise',img:'https://www.adotrip.com/public/images/areas/5c3f1c0f73f93-Darjeeling%20Railway%20Places%20to%20See.jpg'},
+    {id:106,name:'Srinagar, Kashmir',region:'asia', tag:'Houseboats & lakes',img:'https://www.tripsavvy.com/thmb/-AzEW7DpVfnzFwXRy0LISt5RH8c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1432005421-5c0bc8d84cedfd0001fa5acb.jpg'},
+    {id:107,name:'Udaipur, Rajasthan',region:'asia', tag:'Lakes & palaces',img:'https://www.treebo.com/blog/wp-content/uploads/2018/08/Lake-Pichola-in-Udaipur.jpg'},
+    {id:108,name:'Mysore, Karnataka',region:'asia', tag:'Heritage & silk',img:'https://cdn.britannica.com/27/242227-050-48358A10/Mysore-Palace-Mysuru-Karnataka-India.jpg'},
+    {id:109,name:'Pondicherry',region:'asia', tag:'French quarter & beaches',img:'https://hikerwolf.com/wp-content/uploads/2020/03/WhatsApp-Image-2020-03-31-at-3.18.20-PM-1.jpeg'},
+    {id:110,name:'Kodaikanal, Tamil Nadu',region:'asia', tag:'Lakeside serenity',img:'https://static.wixstatic.com/media/1badae_986d31a9ca3047c9aac62d78f7fcdd9a~mv2.jpg/v1/fill/w_622,h_295,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/lake-kodaikanal-1140x530.jpg'},
+    {id:111,name:'Andaman Islands',region:'asia', tag:'Scuba & coral reefs',img:'https://pacifictravelschennai.com/ptc-c/uploads/2017/12/Discover-Andaman-With-Neil-Island4.jpg'},
+    {id:112,name:'Varanasi, Uttar Pradesh',region:'asia', tag:'Sacred ghats & rituals',img:'https://lp-cms-production.imgix.net/2019-06/GettyImages-475540390_medium.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4'},
+    {id:113,name:'Hampi, Karnataka',region:'asia', tag:'Ancient ruins & boulders',img:'https://tse3.mm.bing.net/th/id/OIP.e032N0v-XwcXJLlDejlyOgHaFj?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:114,name:'Kolkata, West Bengal',region:'asia', tag:'Culture, festivals & food',img:'https://www.travelescape.in/wp-content/uploads/2018/07/ccimage-eb36b80b2ffc053ecd0b470de7444e90fe76e7d619b914469df8c9-1.jpg'},
+    {id:115,name:'Chennai, Tamil Nadu',region:'asia', tag:'Temples & beaches',img:'https://www.fabhotels.com/blog/wp-content/uploads/2018/07/Kapaleeswarar-Temple.jpg'},
+    {id:116,name:'Delhi, India',region:'asia', tag:'Historic sites & bazaars',img:'https://www.ujjawalpackers.in/images/blogs/qutub-minar.jpg'},
+    {id:117,name:'Mumbai, Maharashtra',region:'asia', tag:'City of dreams & nightlife',img:'https://lonelyplanetimages.imgix.net/a/g/hi/t/bbc886323ff07d295157ea35f423e121-gateway-of-india.jpg'},
+    {id:118,name:'Khandala, Maharashtra',region:'asia', tag:'Hill station & viewpoints',img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/08/bd/2b/20/caption.jpg?w=1200&h=-1&s=1'},
+    {id:119,name:'Lonavala, Maharashtra',region:'asia', tag:'Monsoons & forts',img:'https://th.bing.com/th/id/R.895d1a778f208ee5c457ffb1df1fe18d?rik=VGjo21Fel6ZGMA&riu=http%3a%2f%2fphotos.wikimapia.org%2fp%2f00%2f02%2f62%2f54%2f75_big.jpg&ehk=Q7DYXJQtpbxFuHSW2DidpWyDIM3MVHKUKE1ut6qwiKQ%3d&risl=&pid=ImgRaw&r=0'},
+    {id:120,name:'Matheran, Maharashtra',region:'asia', tag:'Scenic views & toy train',img:'https://www.travenix.com/wp-content/uploads/2018/11/toy-train1.jpg'},
+    {id:121,name:'Karjat, Maharashtra',region:'asia', tag:'Trekking & waterfalls',img:'https://hblimg.mmtcdn.com/content/hubble/img/ttd_images/mmt/activities/m_Navi%20Mumbai_Pandavkada_falls_2_p_640_640.jpg'},
+    {id:122,name:'Alibaug, Maharashtra',region:'asia', tag:'Beaches & forts',img:'https://www.fabhotels.com/blog/wp-content/uploads/2023/05/Kulaba-Fort.jpg'},
+    {id:123,name:'Pune, Maharashtra',region:'asia', tag:'Culture & cuisine',img:'https://www.indiatravel.app/wp-content/uploads/2024/02/places-to-visit-in-pune-maharashtra-1200x686.jpg'},
+    {id:124,name:'Panchgani, Maharashtra',region:'asia', tag:'Hill station & viewpoints',img:'https://hblimg.mmtcdn.com/content/hubble/img/new_dest_imagemar/mmt/activities/m_Panchgani_2_l_800_1200.jpg'},
+    {id:125,name:'Mahabaleshwar, Maharashtra',region:'asia', tag:'Scenic views & Hill Station',img:'https://i.ytimg.com/vi/6kk9HaojrDU/maxresdefault.jpg'},
+    {id:126,name:'Nashik, Maharashtra',region:'asia', tag:'Vineyards & temples',img:'https://media1.thrillophilia.com/filestore/k4zrqcblv6ldx82uhjxqycgzqegi_1e22d637-a60d-4671-b2d4-9e24b577604a.jpg'},
+    {id:127,name:'Igatpuri, Maharashtra',region:'asia', tag:'Hills & wellness',img:'https://th.bing.com/th/id/R.f0a55a24cf2cb83b49bce4b6878d4138?rik=4i9ETvsG2eWkWQ&riu=http%3a%2f%2fcloudfront.timesnow.tv%2fmedia%2fVipasana_Centre_Igatpuri_6.JPG&ehk=5AnMWsQgJ%2fgwGMitbl3YSRwjgVecu1qZuiNLXokjddM%3d&risl=1&pid=ImgRaw&r=0'},
+    {id:128,name:'Tarkarli, Maharashtra',region:'asia', tag:'Beaches & water sports',img:'https://maharashtratourism.gov.in/wp-content/uploads/2024/11/TARKARLI-BEACH-2.jpg'},
+    {id:129,name:'Dabhol, Maharashtra',region:'asia', tag:'Coastal town & forts',img:'https://th.bing.com/th/id/R.f3ad2dedf4322b4f91208a6cb9a7687b?rik=O3wfgBQYkUc0qg&riu=http%3a%2f%2fbsmedia.business-standard.com%2f_media%2fbs%2fimg%2farticle%2f2015-10%2f28%2ffull%2f1446047533-292.jpg&ehk=DBhmdIViqNK0SjVWn%2bhsHPbjMS6EhZZeTpnFEsikJOw%3d&risl=&pid=ImgRaw&r=0'},
+    {id:130,name:'Murud, Maharashtra',region:'asia', tag:'Beaches & forts',img:'https://www.holidify.com/images/compressed/4073.jpg'},
+    {id:131,name:'Velas, Maharashtra',region:'asia', tag:'Turtle festival & beaches',img:'https://img.traveltriangle.com/blog/wp-content/uploads/2020/02/Velas-Turtle-Festivals_3rd-feb-og.jpg'},
+    {id:132,name:'Chiplun, Maharashtra',region:'asia', tag:'Nature & temples',img:'https://ik.imagekit.io/shortpedia/Voices/wp-content/uploads/2021/06/Koyna-Dam.jpg'},
+    {id:133,name:'Satara, Maharashtra',region:'asia', tag:'Waterfalls & forts',img:'https://static.india.com/wp-content/uploads/2018/08/Satara-photo-2.jpg'},
+    {id:134,name:'Nanded, Maharashtra',region:'asia', tag:'Sikh heritage & ghats',img:'https://peopleplaces.in/wp-content/uploads/2023/02/Nanded-Fort.jpg'},
+    {id:135,name:'Jalgaon, Maharashtra',region:'asia', tag:'Banana farms & temples',img:'https://www.revv.co.in/blogs/wp-content/uploads/2021/03/Pawan-Dam.png'},
+    {id:136,name:'Diveagar, Maharashtra',region:'asia', tag:'Beaches & views',img:'https://static.wixstatic.com/media/b4110a_744d1fd492a3474592208fbe9e3d91e0~mv2.jpg/v1/fill/w_980,h_572,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/b4110a_744d1fd492a3474592208fbe9e3d91e0~mv2.jpg'},
+    {id:137,name:'Ratnagiri, Maharashtra',region:'asia', tag:'Beaches & forts',img:'https://www.adotrip.com/public/images/city/master_images/5e4117bd1fb0f-Ratnagiri_Package_Tour.jpg'},
+    {id:138,name:'Ooty, Tamil Nadu',region:'asia', tag:'Hill station & botanical gardens',img:'https://static.toiimg.com/photo/msid-65754989,width-96,height-65.cms'},
+    {id:139,name:'Jim Corbett, Uttarakhand',region:'asia', tag:'Wildlife & safaris',img:'https://dmgupcwbwy0wl.cloudfront.net/system/images/000/350/000/896830ebaeee7b7a05672a9ddb6415c7/x1000gt/jim-corbett-national-park-1133453130.jpg?1569250241'},
+    {id:140,name:'Banglore, Karnataka',region:'asia', tag:'Tech hub & gardens',img:'https://lp-cms-production.imgix.net/2019-06/9483508eeee2b78a7356a15ed9c337a1-bengaluru-bangalore.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4'},
+    {id:141,name:'Sundarbans, West Bengal',region:'asia', tag:'Mangrove forests & tigers',img:'https://tse1.mm.bing.net/th/id/OIP.8TvdzTiM96sheY02RSPmPQHaEu?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:142,name:'Udaipur, Rajasthan',region:'asia', tag:'Lakes & palaces',img:'https://www.treebo.com/blog/wp-content/uploads/2018/08/Lake-Pichola-in-Udaipur.jpg'},
+    {id:143,name:'Coorg, Karnataka',region:'asia', tag:'Coffee plantations & hills',img:'https://www.agoda.com/wp-content/uploads/2024/03/Abbey-Falls-Coorg-India.jpg'},
+    {id:142,name:'Kochi, Kerala',region:'asia', tag:'Backwaters & culture',img:'https://img.onmanorama.com/content/dam/mm/en/travel/getting-about-kerala/ernakulam/images/2019/10/12/st-basillica-fort-kochi.jpg'},
+    {id:143,name:'Jodhpur, Rajasthan',region:'asia', tag:'Blue city & forts',img:'https://tse3.mm.bing.net/th/id/OIP.tnsl-yfd7iIsM4okRib0jAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:144,name:'Ozar, Maharashtra',region:'asia', tag:'Pilgrimage & nature',img:'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/13/aa/00/4a/ozarde-waterfall.jpg?w=1200&h=1200&s=1'},
+    {id:145,name:'Bhamragarh, Maharashtra',region:'asia', tag:'Waterfalls & wildlife',img:'https://www.via-india.com/wp-content/uploads/2022/03/bhamragarh-wildlife-sanctuary-770x440.jpeg'},
+    {id:146,name:'Ahmednagar, Maharashtra',region:'asia', tag:'Historical sites & forts',img:'https://th.bing.com/th/id/R.fa9d36b650771105a5ec93927e019bcb?rik=YcQ6cn2%2f57vrng&riu=http%3a%2f%2fwww.columbia.edu%2fitc%2fmealac%2fpritchett%2f00routesdata%2f1500_1599%2fakbar%2fahmadnagar%2ffarahbagh2.jpg&ehk=6jpFvWNy3hsCABxDb1zGpfMk3Nvlsa86FSsiPPr9LhE%3d&risl=&pid=ImgRaw&r=0'},
+    {id:147,name:'Latur, Maharashtra',region:'asia', tag:'Caves & forts',img:'https://tse3.mm.bing.net/th/id/OIP.3_9WBEmTmvVe-7eY4A31AwHaEK?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:148,name:'Navi Mumbai, Maharashtra',region:'asia', tag:'Modern city & beaches',img:'https://img.staticmb.com/mbcontent/images/uploads/2025/3/navi-mumbai-city-guide.jpg'},
+    {id:149,name:'Thane, Maharashtra',region:'asia', tag:'Lakes & forts',img:'https://th.bing.com/th/id/R.cac4e734010e7692347e5711ea7d67ed?rik=4udOU2Ncr8cPXQ&riu=http%3a%2f%2fhiranandani.com%2fimg%2fgallery%2fgallery-thane-estate%2f03.jpg&ehk=D8lHpx6NBEISrrSOwkY5cEIYEuzlLg0ySjlAhh80quM%3d&risl=&pid=ImgRaw&r=0'},
+    {id:150,name:'Amravati, Maharashtra',region:'asia', tag:'Temples & culture',img:'https://th.bing.com/th/id/R.b055f10d53e2defa6edae8ff17937719?rik=otXqCPtKJijZug&riu=http%3a%2f%2fwww.easymyjourney.com%2fimages%2fcity%2famravati.jpg&ehk=REDjQxFljB1iUVgk6Gw6%2f2lza8geMaTXIS7EqPCgICA%3d&risl=&pid=ImgRaw&r=0'},
+    {id:151,name:'Dahanu, Maharashtra',region:'asia', tag:'Beaches & tribal culture',img:'https://gumlet.assettype.com/freepressjournal/2022-06/256b60be-2100-421f-9abc-96e23a682d0c/DAHANU_BEACH_2.jpg?rect=0%2C0%2C3900%2C2048&w=1200&auto=format%2Ccompress&ogImage=true'},
+    {id:152,name:'Tamhini Ghat, Maharashtra',region:'asia', tag:'Waterfalls & trekking',img:'https://th.bing.com/th/id/R.b0c4deacff103f181d28e55dce1bde98?rik=hhbyliG8skUwxQ&riu=http%3a%2f%2fwww.tamhinighat.com%2fwp-content%2fuploads%2fphoto-gallery%2f8.jpg&ehk=5ONWmT6HVvNuBqJL8N5cUH%2fXabuNyxnZZyXlC%2fpDny8%3d&risl=&pid=ImgRaw&r=0'},
+    {id:153,name:'Palghar, Maharashtra',region:'asia', tag:'Beaches & forts',img:'https://tripxl.com/blog/wp-content/uploads/2024/10/Kelva-Fort.jpg'},
+    {id:154,name:'Chorla Ghat, Maharashtra',region:'asia', tag:'Biodiversity & trekking',img:'https://www.inditales.com/wp-content/uploads/2016/01/swimming-pool-swapnagandha-resort.jpg'},
+    {id:155,name:'Phaltan, Maharashtra',region:'asia', tag:'Historical & Royal Heritage',img:'https://static.toiimg.com/photo/53300047/.jpg'},
+    {id:156,name:'Lohagad, Maharashtra',region:'asia', tag:'Fort & trekking',img:'https://tse4.mm.bing.net/th/id/OIP.egQR-cgdFHyLYCulmLyxNAHaFY?w=1076&h=783&rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:156,name:'Imagica, Maharashtra',region:'asia', tag:'Theme park & entertainment',img:'https://i.pinimg.com/originals/a5/66/d3/a566d377026e315f7b907b2da80c6c97.jpg'},
+    {id:157,name:'Visapur, Maharashtra',region:'asia', tag:'Waterfalls & Fort',img:'https://im.whatshot.in/img/2020/Aug/lohagad-fort-1521570260-1562915979-1598786690.jpg'},
+    {id:158,name:'Karnala, Maharashtra',region:'asia', tag:'Bird sanctuary & trekking',img:'https://www.mysoreadda.com/wp-content/uploads/2020/11/Mysore-Bird-Sanctuary.jpg'},
+    {id:159,name:'Prabalgad, Maharashtra',region:'asia', tag:'Fort & hiking',img:'https://th.bing.com/th/id/R.6ee678fe22e933b12e5b46954e790f7e?rik=Jkeug9R1kQtSyQ&riu=http%3a%2f%2fmaharashtraplanet.com%2fwp-content%2fuploads%2f2013%2f10%2fPrabalgad-Fort-Raigad.jpg&ehk=22%2ffCLIO4AinuliSRyzWpg4KNhPNKD8YsczJKKxNGx0%3d&risl=&pid=ImgRaw&r=0'},
+    {id:160,name:'Kaas Plateau, Maharashtra',region:'asia', tag:'Biodiversity & flowers',img:'https://www.trawell.in/admin/images/upload/794934986Satara_Kaas_Main.jpg'},
+    {id:161,name:'Durshet, Maharashtra',region:'asia', tag:'Hill station & wildlife',img:'https://img.lifeisoutside.com/getaways/328/microsite/durshet-than.png'},
+    {id:162,name:'Assam, India',region:'asia', tag:'Tea gardens & wildlife',img:'https://th.bing.com/th/id/R.b37104f9b18829b0448014b247e650e8?rik=M%2bW%2fOeWTz%2fpnEw&riu=http%3a%2f%2fsiddhikshatravels.com%2fwp-content%2fuploads%2f2019%2f08%2f0cc5d2f8ab1ef77925dd629f8132cdbc.jpg&ehk=uo1wrGYKhoEelkR4YMUttYF3GF2thFBw6L0s%2b2iCUbg%3d&risl=&pid=ImgRaw&r=0'},
+    {id:163,name:'Meghalaya, India',region:'asia', tag:'Living root bridges & hills',img:'https://static.wixstatic.com/media/59aa77_58e45307d1a347b88ed1bddc28a91054~mv2.jpg/v1/fill/w_640,h_480,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/59aa77_58e45307d1a347b88ed1bddc28a91054~mv2.jpg'},
+    {id:164,name:'Mizoram, India',region:'asia', tag:'Hills & culture',img:'https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2023/12/07113458/Aizawl.jpg'},
+    {id:165,name:'Nagaland, India',region:'asia', tag:'Tribes & festivals',img:'https://www.tourmyindia.com/blog/wp-content/uploads/2015/02/dimapur.jpg'},
+    {id:166,name:'Sikkim, India',region:'asia', tag:'Mountains & monasteries',img:'https://www.trawheeling.in/wp-content/uploads/2021/05/sikkim_1920x1008.jpg'},
+    {id:167,name:'Arunachal Pradesh, India',region:'asia', tag:'Mountains & tribes',img:'https://s3.india.com/wp-content/uploads/2024/05/Feature-Image_-Tawang.jpg##image/jpg'},
+    {id:168,name:'Haryana, India',region:'asia', tag:'History & culture',img:'https://www.travelworldplanet.com/wp-content/uploads/2022/09/Sheikh-Chehli-Mausoleum-Kurukshetra-Haryana-min-768x456.jpg'},
+    {id:169,name:'Punjab, India',region:'asia', tag:'Gurdwaras & culture',img:'https://cdn.britannica.com/53/176353-050-5B854179/Harmandir-Sahib-Amritsar-Punjab-India.jpg'},
+    {id:170,name:'Naini Tal, Uttarakhand',region:'asia', tag:'Lakes & hills',img:'https://www.soulitude.in/wp-content/uploads/Nainital-Lake.jpg'},
+    {id:171,name:'Lakshadweep, India',region:'asia', tag:'Islands & reefs',img:'https://i.pinimg.com/originals/72/60/18/726018a48d25e8e59d0c8089858df926.jpg'},
+    {id:172,name:'Rann of Kutch, Gujarat',region:'asia', tag:'Salt desert & culture',img:'https://www.trawell.in/admin/images/upload/359804554Main.jpg'},
+    {id:173,name:'Gir National Park, Gujarat',region:'asia', tag:'Lions & wildlife',img:'https://www.gujarattourism.com/content/dam/gujrattourism/images/flora--fauna/gir-national-park/gallery/Sasan%20Gir%20(15).jpg'},
+    {id:174,name:'Diu, India',region:'asia', tag:'Beaches & forts',img:'https://www.trawell.in/admin/images/upload/899766255Nagoa_Beach_Main.jpg'},
+    {id:175,name:'Araku Valley, Andhra Pradesh',region:'asia', tag:'Hills & coffee plantations',img:'https://blog.redbus.in/wp-content/uploads/2021/11/shutterstock_1559121689.jpg'},
+    {id:176,name:'Borra Caves, Andhra Pradesh',region:'asia', tag:'Limestone caves & stalactites',img:'https://media.tripinvites.com/places/visakhapatnam/borra-caves/borra-caves-in-visakhapatnam-featured.jpg'},
+    {id:177,name:'Belum Caves, Andhra Pradesh',region:'asia', tag:'Underground caves & formations',img:'https://th.bing.com/th/id/R.817190a0cfb120ea544f298365fe1739?rik=efBkzU9sZkU3zw&riu=http%3a%2f%2fwww.cometoindia.com%2farticles%2fmain%2fbelum_800x400.jpg&ehk=mPgc85dGNCHWOW598gwfIEKlqQYTSwg01YhdzL%2beTDc%3d&risl=&pid=ImgRaw&r=0'},
+    {id:178,name:'Visakhapatnam, Andhra Pradesh',region:'asia', tag:'Beaches & hills',img:'https://visittotravel.com/wp-content/uploads/2023/07/eshwar-4UeDRhp2CWk-unsplash-1-scaled.jpg'},
+    {id:179,name:'Tawang, Arunachal Pradesh',region:'asia', tag:'Monasteries & mountains',img:'https://travelogyindia.b-cdn.net/storage/app/upload/tawang-monastery-1.jpg'},
+    {id:180,name:'Ziro, Arunachal Pradesh',region:'asia', tag:'Valley & festivals',img:'https://travelogyindia.b-cdn.net/storage/app/upload/ziro-arunachal-pradesh.jpg'},
+    {id:181,name:'Bomdila, Arunachal Pradesh',region:'asia', tag:'Hills & monasteries',img:'https://i.pinimg.com/originals/6a/2a/90/6a2a908ff9cce08fbd8a43cc13be5954.jpg'},
+    {id:182,name:'Namdapha National Park, Arunachal Pradesh',region:'asia', tag:'Biodiversity & trekking',img:'https://static2.tripoto.com/media/filter/nl/img/267346/SpotDocument/1511427001_1511426993_thinkstockphotos_474468142.jpg'},
+    {id:183,name:'Sela Pass, Arunachal Pradesh',region:'asia', tag:'Mountain pass & views',img:'https://www.hlimg.com/images/things2do/738X538/ttd_1523873678m2.jpg'},
+    {id:184,name:'Dirang, Arunachal Pradesh',region:'asia', tag:'Valley & hot springs',img:'https://www.adotrip.com/public/images/areas/615c14d49acc6-Dirang%20Travel.jpg'},
+    {id:185,name:'Majuli Island, Assam',region:'asia', tag:'River island & culture',img:'https://pune.news/wp-content/uploads/2024/10/Majuli-Island.webp'},
+    {id:186,name:'Sivasagar, Assam',region:'asia', tag:'Historical sites & culture',img:'https://chaloghumane.com/wp-content/uploads/2021/08/Sivasagar-1400x800.jpg'},
+    {id:187,name:'Patna Museum, Bihar',region:'asia', tag:'History & artifacts',img:'https://tse1.explicit.bing.net/th/id/OIP.6TivAml5AlfRJjTzkXAa8gHaFj?rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:188,name:'Chitrakote Falls, Chhattisgarh',region:'asia', tag:'Waterfalls & nature',img:'https://i.redd.it/wu6yidbkshvy.jpg'},
+    {id:189,name:'Bastar, Chhattisgarh',region:'asia', tag:'Tribal culture & forests',img:'https://www.hamarajagdalpur.com/wp-content/uploads/2019/09/6732632947_a4b01dd188_o-1024x731.jpg'},
+    {id:190,name:'Barnawapara Wildlife Sanctuary, Chhattisgarh',region:'asia', tag:'Wildlife & nature',img:'https://www.tourmyindia.com/blog/wp-content/uploads/2014/09/Untitled-design-12-1-1.png'},
+    {id:191,name:'Sirpur, Chhattisgarh',region:'asia', tag:'Archaeological sites & temples',img:'https://1.bp.blogspot.com/-0QV1GxwdkWw/YGF1MfwMF3I/AAAAAAAAFWc/JPQagX4MNcsbQAtD_nrD-s5WGv1SYm2RgCLcBGAsYHQ/s2048/Sirpur%2Bthe%2Bsacred%2Bcity%2Bof%2Bsouth%2Bkosala.jpg'},
+    {id:192,name:'Baga Beach, Goa',region:'asia', tag:'Beaches & nightlife',img:'https://tse4.mm.bing.net/th/id/OIP.I51tmZOcz4GJ4ht8NKCWGwHaE7?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:193,name:'Calangute, Goa',region:'asia', tag:'Beaches & water sports',img:'https://th.bing.com/th/id/R.1eb664ae596e57239df7a32efaa91f25?rik=KdQBMnOA%2buq6wg&riu=http%3a%2f%2fphotos.wikimapia.org%2fp%2f00%2f04%2f00%2f64%2f28_big.jpg&ehk=ee%2bUKD6mCQr3NmVwk1TI9y5d%2bW8rsMi8uFmmeHyB9DY%3d&risl=&pid=ImgRaw&r=0'},
+    {id:194,name:'Fort Aguada, Goa',region:'asia', tag:'Historic fort & views',img:'https://www.fabhotels.com/blog/wp-content/uploads/2019/06/Aguada-Fort_600.jpg'},
+    {id:195,name:'Dudhsagar Falls, Goa',region:'asia', tag:'Waterfalls & nature',img:'https://as1.ftcdn.net/jpg/04/70/16/00/1000_F_470160094_5nywvKDRwC7pMHgWAhSGOejWzBGL1uot.jpg'},
+    {id:196,name:'Chapora Fort, Goa',region:'asia', tag:'Historic fort & views',img:'https://resources.thomascook.in/images/holidays/sightSeeing/044_Chapora_Fort_Goa_India_960.jpg'},
+    {id:197,name:'Morni Hills, Haryana',region:'asia', tag:'Hill station & trekking',img:'https://tse2.mm.bing.net/th/id/OIP.2bgHK4p2jmvytSlBktyyzQAAAA?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3'},
+    {id:198,name:'Pinjore Garden, Haryana',region:'asia', tag:'Architectural gardens & history',img:'https://tse4.mm.bing.net/th/id/OIP.BLDzB3onco1cCPngIpxTpAHaFj?cb=ucfimg2ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3'},
+  ];
+
+  const tours = [
+    {id:401,title:'Paris City Highlights',destId:1,price:15000,days:'3 days',img:destinations[0].img},
+    {id:402,title:'Bali Island Retreat',destId:2,price:20000,days:'4 days',img:destinations[1].img},
+    {id:403,title:'Tokyo Urban Experience',destId:3,price:7999,days:'3 days',img:destinations[2].img},
+    {id:404,title:'Santorini Sunset Escape',destId:5,price:10999,days:'3 days',img:destinations[4].img},
+    {id:405,title:'Maharashtra Cultural Tour',destId:117,price:6999,days:'5 days',img:'https://lonelyplanetimages.imgix.net/a/g/hi/t/bbc886323ff07d295157ea35f423e121-gateway-of-india.jpg'},
+    {id:406,title:'America West Coast Highlights',destId:6,price:25000,days:'7 days',img:destinations[5].img},
+  ];
+
+  // Render functions
+  function renderDestinations(list, containerId){
+    const container = document.getElementById(containerId);
+    container.innerHTML = '';
+    list.forEach(d=>{
+      const el = document.createElement('div'); el.className='card';
+      el.innerHTML = `
+        <img src="${d.img}" alt="${d.name}">
+        <h3 style="margin:8px 0 4px 0">${d.name}</h3>
+        <div style="color:var(--muted)">${d.tag}</div>
+        <div class="meta"><div>${d.region || '—'}</div><div><button class="link-btn" onclick="openTours(${d.id})">View Tours</button>
+
+      `;
+      container.appendChild(el);
+    });
+  }
+
+  function openTours(destId) {
+    showToursFor(destId);
+    document.getElementById('tours').scrollIntoView({ behavior: 'smooth' });
+  }
+
+  function renderTours(list){
+    const tourList = document.getElementById('tourList');
+    tourList.innerHTML = '';
+    list.forEach(t=>{
+      const bookUrl = AFFILIATE_BASE + `&ss=${encodeURIComponent(getDestName(t.destId))}`;
+      const el = document.createElement('div'); el.className='tour';
+      el.innerHTML = `
+        <img src="${t.img}" alt="${t.title}">
+        <div style="flex:1"><strong>${t.title}</strong><div style="color:var(--muted)">${getDestName(t.destId)} • ${t.days}</div></div>
+        <div style="text-align:right"><div style="font-weight:800">₹${t.price}</div><div style="margin-top:8px"><a class="book-btn" href="${bookUrl}" target="_blank">Book Now</a></div></div>
+      `;
+      tourList.appendChild(el);
+    });
+  }
+
+  function getDestName(id){
+    let d = destinations.find(x=>x.id===id);
+    if(!d) d = indiaList.find(x=>x.id===id);
+    return d ? d.name : 'Various';
+  }
+
+  function showToursFor(destId){
+    console.log("Clicked destination ID:", destId);
+    const list = tours.filter(t=>t.destId===destId);
+    if(list.length===0){ alert('The destination page is down, go checkout and book your tour! 🌹'); return }
+    renderTours(list);
+  }
+
+  // initial render
+  renderDestinations(destinations, 'destGrid');
+  renderDestinations(indiaList, 'indiaGrid');
+  renderTours(tours);
+
+  // Search & filters
+  document.getElementById('searchBtn').addEventListener('click', ()=>{
+    const q = document.getElementById('q').value.trim().toLowerCase();
+    const region = document.getElementById('regionFilter').value;
+    const all = destinations.concat(indiaList.map(d=>({ ...d, region:'india' })));
+    const results = all.filter(d=>{
+      if(region && region!=='all' && d.region!==region) return false;
+      if(q==='') return true;
+      return d.name.toLowerCase().includes(q) || (d.tag && d.tag.toLowerCase().includes(q));
+    });
+    if(results.length===0){ document.getElementById('destGrid').innerHTML='<div style="color:var(--muted)">No destinations found. Try clearing filters.</div>'; document.getElementById('indiaGrid').innerHTML=''; return }
+    // Split: show non-India in top grid, India in India grid
+    renderDestinations(results.filter(r=>r.region && r.region!=='india').slice(0,30), 'destGrid');
+    renderDestinations(results.filter(r=>r.region==='india'), 'indiaGrid');
+  });
+
+  // Contact form (Formspree will POST when endpoint replaced)
+  document.getElementById('contactForm').addEventListener('submit', (e)=>{
+    setTimeout(()=>{ alert('Thank you — your message was sent (if Formspree is configured).') }, 300);
+  });
+
+  // Theme toggle
+  document.getElementById('themeToggle').addEventListener('click', ()=>{
+    const el = document.body;
+    const current = el.getAttribute('data-theme') || 'light';
+    const next = current==='light' ? 'dark' : 'light';
+    el.setAttribute('data-theme', next);
+  });
+
+  // Top Book button
+  document.getElementById('bookTopBtn').addEventListener('click', (e)=>{
+    e.preventDefault();
+    window.open(AFFILIATE_BASE, '_blank');
+  });
+
+  // Year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  console.log('WanderLuxeTrips (with India) loaded. Replace AFFILIATE_BASE and FORM_ENDPOINT with real values.');
+</script>
+<script src="//code.tidio.co/sh6akuakirpyy6nrc5hlskkuax3bfzsr.js" async></script>
+
+</body>
+</html>
