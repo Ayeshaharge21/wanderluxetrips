@@ -646,7 +646,7 @@
 <script>
   // Replace with your Travelpayouts or Booking.com affiliate link when ready.
   // Travelpayouts sample will look like: https://tp.media/r?marker=XXXX&p=booking.com
-  const AFFILIATE_BASE = 'https://www.booking.com/?aid=YOUR_AID_HERE';
+  const AFFILIATE_BASE = 'https://klook.tp.st/sTp6PFkV';
 
   // Worldwide destinations (25)
   const destinations = [
@@ -885,7 +885,7 @@
     const tourList = document.getElementById('tourList');
     tourList.innerHTML = '';
     list.forEach(t=>{
-      const bookUrl = AFFILIATE_BASE + `&ss=${encodeURIComponent(getDestName(t.destId))}`;
+      const bookUrl = https://klook.tp.st/sTp6PFkV + `&ss=${encodeURIComponent(getDestName(t.destId))}`;
       const el = document.createElement('div'); el.className='tour';
       el.innerHTML = `
         <img src="${t.img}" alt="${t.title}">
@@ -946,7 +946,7 @@
   // Top Book button
   document.getElementById('bookTopBtn').addEventListener('click', (e)=>{
     e.preventDefault();
-    window.open(AFFILIATE_BASE, '_blank');
+    window.open(https://klook.tp.st/sTp6PFkV, '_blank');
   });
 
   // Year
@@ -968,6 +968,7 @@
 
 </body>
 </html>
+
 
 
 
