@@ -168,6 +168,17 @@
       text-decoration: underline;
     }
 
+  .tour-section {
+  background: #f8f8f8;
+  padding: 20px;
+  margin-top: 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.destination-wrapper {
+  margin-bottom: 30px;
+}
+
 
     @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero-right img{height:200px}}
     @media(max-width:640px){.grid{grid-template-columns:1fr}.contact-form{grid-template-columns:1fr}.main-nav{display:none}}
@@ -217,23 +228,33 @@
     <!-- Worldwide destinations -->
     <section id="dest">
       <h2>Top Worldwide Destinations</h2>
-      <div class="grid" id="destGrid"><div class="card">
-        <img src="https://media.istockphoto.com/id/2151954540/photo/view-of-paris-with-eiffel-tower.webp?a=1&amp;b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=o9f8Wu0PwgG_kNqjmhsxktpn5QguSzbWqRv1mtesk4A=" alt="Paris, France">
-        <h3 style="margin:8px 0 4px 0">Paris, France</h3>
-        <div style="color:var(--muted)">Art, cafés &amp; romance</div>
-        <div class="meta"><div>europe</div><div><a href="#paris-details" class="btn">View Tours</a>
-           <section id="paris-details" class="tour-section">
-  <h2>Paris, France</h2>
-  <p>City of Love with Eiffel Tower, Louvre Museum, Seine River cruises & world-class cafes.</p>
-  <p><strong>Best Time:</strong> April to June, September to October</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹89,999 per person</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
+      <div class="grid" id="destGrid">
+        
+      <!-- Paris -->
+<div class="destination-wrapper">
+  <div class="card">
+    <img src="https://media.istockphoto.com/id/2151954540/photo/view-of-paris-with-eiffel-tower.webp?a=1&b=1&s=612x612&w=0&h=8am" alt="Paris, France">
+    <h3 style="margin:8px 0 4px 0">Paris, France</h3>
+    <div style="color:var(--muted)">Art, cafés & romance</div>
+    <div class="meta">
+      <div>europe</div>
+      <div><button class="btn view-tour-btn" data-target="paris-details">View Tours</button></div>
+    </div>
+  </div>
 
-      </div></div></div><div class="card">
+  <section id="paris-details" class="tour-section" style="display: none;">
+    <h2>Paris, France</h2>
+    <p>City of Love with Eiffel Tower, Louvre Museum, Seine River cruises & world-class cafes.</p>
+    <p><strong>Best Time:</strong> April to June, September to October</p>
+    <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
+    <p><strong>Price:</strong> ₹1,09,999 per person</p>
+    <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
+    <br><br>
+    <button class="btn close-tour-btn">↑ Close</button>
+  </section>
+</div>
+        
+        <div class="card">
         <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?q=80&amp;w=1200&amp;auto=format&amp;fit=crop" alt="Bali, Indonesia">
         <h3 style="margin:8px 0 4px 0">Bali, Indonesia</h3>
         <div style="color:var(--muted)">Temples &amp; surf</div>
@@ -2304,696 +2325,27 @@
 }
 </style></div><tp-tooltip-container id="tooltip" role="tooltip" data-testid="tooltip-container" style="display: none; width: max-content; position: absolute; top: 0px; left: 0px; padding: 6px; z-index: 2147483647;"></tp-tooltip-container><tp-tooltip-container id="tooltip" role="tooltip" data-testid="tooltip-container" style="display: none; width: max-content; position: absolute; top: 0px; left: 0px; padding: 6px; z-index: 2147483647;"></tp-tooltip-container><tp-tooltip-container id="tooltip" role="tooltip" data-testid="tooltip-container" style="display: none; width: max-content; position: absolute; top: 0px; left: 0px; padding: 6px; z-index: 2147483647;"></tp-tooltip-container><tp-tooltip-container id="tooltip" role="tooltip" data-testid="tooltip-container" style="display: none; width: max-content; position: absolute; top: 0px; left: 0px; padding: 6px; z-index: 2147483647;"></tp-tooltip-container>
 
- <section id="bali-details" class="tour-section">
-  <h2>Bali, Indonesia</h2>
-  <p>Tropical paradise with rice terraces, volcanic mountains, beach clubs & ancient temples.</p>
-  <p><strong>Best Time:</strong> April to October</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹24,999 per person</p>
-  <p><strong>Highlights:</strong> Ubud, Tanah Lot, Uluwatu, Nusa Penida</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="tokyo-details" class="tour-section">
-  <h2>Tokyo, Japan</h2>
-  <p>Ultra-modern meets tradition: Shibuya crossing, Mt. Fuji views, ancient temples & world-class sushi.</p>
-  <p><strong>Best Time:</strong> March to May, October to November</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹74,999 per person</p>
-  <p><strong>Highlights:</strong> Shibuya, Shinjuku, Asakusa Temple, Tokyo Skytree, Cherry Blossoms</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="newyork-details" class="tour-section">
-  <h2>New York, USA</h2>
-  <p>The Big Apple: Times Square, Central Park, Statue of Liberty & Broadway shows. Skyline that hits different.</p>
-  <p><strong>Best Time:</strong> April to June, September to November</p>
-  <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
-  <p><strong>Price:</strong> ₹1,24,999 per person</p>
-  <p><strong>Highlights:</strong> Times Square, Brooklyn Bridge, Empire State, Central Park, Broadway</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="santorini-details" class="tour-section">
-  <h2>Santorini, Greece</h2>
-  <p>Iconic white-washed buildings, blue domes, cliff-side views & legendary Aegean sunsets.</p>
-  <p><strong>Best Time:</strong> May to October</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹94,999 per person</p>
-  <p><strong>Highlights:</strong> Oia Sunset, Fira Town, Red Beach, Volcano Tour, Wine Tasting</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="maldives-details" class="tour-section">
-  <h2>Maldives</h2>
-  <p>Private overwater villas, turquoise lagoons, coral reefs & world-class snorkeling. Pure luxury.</p>
-  <p><strong>Best Time:</strong> November to April</p>
-  <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-  <p><strong>Price:</strong> ₹1,49,999 per person</p>
-  <p><strong>Highlights:</strong> Overwater Villa, Snorkeling, Dolphin Cruise, Sandbank Picnic, Spa</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>  
+<script>
+document.querySelectorAll('.view-tour-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.tour-section').forEach(sec => {
+      sec.style.display = 'none';
+    });
+    const targetId = this.getAttribute('data-target');
+    const targetSection = document.getElementById(targetId);
+    targetSection.style.display = 'block';
+    setTimeout(() => {
+      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  });
+});
 
-  <section id="dubai-details" class="tour-section">
-  <h2>Dubai, UAE</h2>
-  <p>City of superlatives: Burj Khalifa, Palm Jumeirah, desert safaris & gold souks. Future is here.</p>
-  <p><strong>Best Time:</strong> November to March</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹59,999 per person</p>
-  <p><strong>Highlights:</strong> Burj Khalifa, Desert Safari, Dubai Mall, Palm Atlantis, Marina Dhow Cruise</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="rome-details" class="tour-section">
-  <h2>Rome, Italy</h2>
-  <p>Eternal City: Colosseum, Vatican City, Trevi Fountain & authentic Italian pasta. History in every street.</p>
-  <p><strong>Best Time:</strong> April to June, September to October</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹79,999 per person</p>
-  <p><strong>Highlights:</strong> Colosseum, Vatican Museums, Trevi Fountain, Pantheon, Roman Forum</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="sydney-details" class="tour-section">
-  <h2>Sydney, Australia</h2>
-  <p>Harbour City: Sydney Opera House, Harbour Bridge, Bondi Beach & coastal walks. Laid-back luxury.</p>
-  <p><strong>Best Time:</strong> September to November, March to May</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹1,09,999 per person</p>
-  <p><strong>Highlights:</strong> Opera House Tour, Harbour Bridge Climb, Bondi to Coogee Walk, Blue Mountains</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="capetown-details" class="tour-section">
-  <h2>Cape Town, South Africa</h2>
-  <p>Mother City: Table Mountain, Cape Point, Boulders Beach penguins & world-class vineyards.</p>
-  <p><strong>Best Time:</strong> March to May, September to November</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹84,999 per person</p>
-  <p><strong>Highlights:</strong> Table Mountain Cable Car, Cape Point, Boulders Beach, Stellenbosch Wine Tour</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="machupicchu-details" class="tour-section">
-  <h2>Machu Picchu, Peru</h2>
-  <p>Lost City of the Incas: Ancient ruins in the Andes, Sacred Valley & breathtaking mountain views.</p>
-  <p><strong>Best Time:</strong> April to October</p>
-  <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
-  <p><strong>Price:</strong> ₹1,39,999 per person</p>
-  <p><strong>Highlights:</strong> Machu Picchu Citadel, Sacred Valley, Cusco City, Inca Trail, Alpaca Farm</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="grandcanyon-details" class="tour-section">
-  <h2>Grand Canyon, USA</h2>
-  <p>Nature's Masterpiece: Mile-deep canyon, Colorado River, epic sunrise & sunset points. Pure scale.</p>
-  <p><strong>Best Time:</strong> March to May, September to November</p>
-  <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-  <p><strong>Price:</strong> ₹99,999 per person</p>
-  <p><strong>Highlights:</strong> South Rim, Skywalk, Helicopter Tour, Desert View Drive, Havasu Falls Trek</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="riodejaneiro-details" class="tour-section">
-  <h2>Rio de Janeiro, Brazil</h2>
-  <p>Cidade Maravilhosa: Christ the Redeemer, Sugarloaf Mountain, Copacabana Beach & Samba nights.</p>
-  <p><strong>Best Time:</strong> December to March</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹1,14,999 per person</p>
-  <p><strong>Highlights:</strong> Christ the Redeemer, Sugarloaf Cable Car, Copacabana, Selarón Steps, Favela Tour</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="zanzibar-details" class="tour-section">
-  <h2>Zanzibar, Tanzania</h2>
-  <p>Spice Island: White sand beaches, Stone Town UNESCO site, spice farms & crystal clear water.</p>
-  <p><strong>Best Time:</strong> June to October, December to February</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹74,999 per person</p>
-  <p><strong>Highlights:</strong> Stone Town, Nungwi Beach, Spice Farm Tour, Prison Island, Safari Blue</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="iceland-details" class="tour-section">
-  <h2>Iceland</h2>
-  <p>Land of Fire & Ice: Northern Lights, Blue Lagoon, waterfalls, glaciers & volcanic landscapes.</p>
-  <p><strong>Best Time:</strong> September to March for Aurora, June to August for midnight sun</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹1,34,999 per person</p>
-  <p><strong>Highlights:</strong> Blue Lagoon, Golden Circle, Northern Lights Hunt, Glacier Walk, Black Sand Beach</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="newzealand-details" class="tour-section">
-  <h2>New Zealand</h2>
-  <p>Aotearoa: Milford Sound, Hobbiton, glaciers, bungee jumping & epic landscapes. Pure adventure.</p>
-  <p><strong>Best Time:</strong> December to February, September to November</p>
-  <p><strong>Duration:</strong> 8 Days / 7 Nights</p>
-  <p><strong>Price:</strong> ₹1,29,999 per person</p>
-  <p><strong>Highlights:</strong> Milford Sound Cruise, Hobbiton Tour, Queenstown Adventure, Franz Josef Glacier, Rotorua</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-[1:26 pm, 11/06/2026] Mumma 💌: <section id="agra-details" class="tour-section">
-  <h2>Agra, India</h2>
-  <p>City of Love: Taj Mahal, Agra Fort, Mehtab Bagh & authentic Mughlai cuisine.</p>
-  <p><strong>Best Time:</strong> October to March</p>
-  <p><strong>Duration:</strong> 2 Days / 1 Night</p>
-  <p><strong>Price:</strong> ₹9,999 per person</p>
-  <p><strong>Highlights:</strong> Taj Mahal Sunrise, Agra Fort, Mehtab Bagh, Fatehpur Sikri, Local Bazaar</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-[1:26 pm, 11/06/2026] Mumma 💌: <section id="goa-details" class="tour-section">
-  <h2>Goa, India</h2>
-  <p>Beach Capital: Baga, Anjuna, Old Goa Churches, water sports & legendary nightlife.</p>
-  <p><strong>Best Time:</strong> November to February</p>
-  <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-  <p><strong>Price:</strong> ₹14,999 per person</p>
-  <p><strong>Highlights:</strong> Baga Beach, Dudhsagar Falls, Old Goa, Cruise Party, Water Sports, Night Markets</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="kerala-details" class="tour-section">
-  <h2>Kerala, India</h2>
-  <p>God's Own Country: Alleppey backwaters, Munnar tea gardens, Kovalam beach & Ayurveda retreats.</p>
-  <p><strong>Best Time:</strong> September to March</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹19,999 per person</p>
-  <p><strong>Highlights:</strong> Alleppey Houseboat, Munnar Tea Gardens, Thekkady, Kovalam Beach, Kathakali Show</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="ladakh-details" class="tour-section">
-  <h2>Ladakh, India</h2>
-  <p>Land of High Passes: Pangong Lake, Nubra Valley, Magnetic Hill & monasteries at 11,000+ ft.</p>
-  <p><strong>Best Time:</strong> May to September</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹24,999 per person</p>
-  <p><strong>Highlights:</strong> Pangong Lake, Nubra Valley, Khardung La, Magnetic Hill, Leh Palace, Monasteries</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="bangkok-details" class="tour-section">
-  <h2>Bangkok, Thailand</h2>
-  <p>City of Angels: Grand Palace, Wat Arun, floating markets, street food & wild nightlife.</p>
-  <p><strong>Best Time:</strong> November to February</p>
-  <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-  <p><strong>Price:</strong> ₹29,999 per person</p>
-  <p><strong>Highlights:</strong> Grand Palace, Wat Pho, Chatuchak Market, Chao Phraya Cruise, Khao San Road</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="china-details" class="tour-section">
-  <h2>China</h2>
-  <p>Imperial Capital: Great Wall, Forbidden City, Tiananmen Square & authentic Peking Duck.</p>
-  <p><strong>Best Time:</strong> April to May, September to October</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹54,999 per person</p>
-  <p><strong>Highlights:</strong> Great Wall Mutianyu, Forbidden City, Temple of Heaven, Summer Palace, Hutongs</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-<section id="london-details" class="tour-section">
-  <h2>London, United Kingdom</h2>
-  <p>Royal Capital: Big Ben, London Eye, Tower Bridge, Buckingham Palace & British Museum.</p>
-  <p><strong>Best Time:</strong> May to September</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹89,999 per person</p>
-  <p><strong>Highlights:</strong> Big Ben, London Eye, Tower of London, Westminster Abbey, Thames Cruise</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="barcelona-details" class="tour-section">
-  <h2>Barcelona, Spain</h2>
-  <p>Gaudí's City: Sagrada Familia, Park Güell, Las Ramblas & Barceloneta Beach vibes.</p>
-  <p><strong>Best Time:</strong> May to June, September to October</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹84,999 per person</p>
-  <p><strong>Highlights:</strong> Sagrada Familia, Park Güell, Gothic Quarter, Casa Batlló, Camp Nou</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="venice-details" class="tour-section">
-  <h2>Venice, Italy</h2>
-  <p>City of Canals: Gondola rides, St. Mark's Basilica, Rialto Bridge & Murano Glass.</p>
-  <p><strong>Best Time:</strong> April to June, September to October</p>
-  <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-  <p><strong>Price:</strong> ₹79,999 per person</p>
-  <p><strong>Highlights:</strong> Gondola Ride, St. Mark's Square, Doge's Palace, Rialto Bridge, Murano Island</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="mauritius-details" class="tour-section">
-  <h2>Mauritius</h2>
-  <p>Paradise Island: Blue lagoons, Seven Colored Earth, Chamarel Falls & coral reefs.</p>
-  <p><strong>Best Time:</strong> May to December</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹94,999 per person</p>
-  <p><strong>Highlights:</strong> Seven Colored Earth, Chamarel Falls, Île aux Cerfs, Blue Bay Marine Park, Port Louis</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="swissalps-details" class="tour-section">
-  <h2>Swiss Alps, Switzerland</h2>
-  <p>Alpine Paradise: Matterhorn, Jungfraujoch, Interlaken & scenic train rides.</p>
-  <p><strong>Best Time:</strong> June to September, December to March</p>
-  <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
-  <p><strong>Price:</strong> ₹1,89,999 per person</p>
-  <p><strong>Highlights:</strong> Jungfraujoch Top of Europe, Matterhorn, Glacier Express, Interlaken, Lucerne</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="muscat-details" class="tour-section">
-  <h2>Muscat, Oman</h2>
-  <p>Arabian Gem: Sultan Qaboos Grand Mosque, Mutrah Souq, Wadi Shab & desert dunes.</p>
-  <p><strong>Best Time:</strong> October to April</p>
-  <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-  <p><strong>Price:</strong> ₹54,999 per person</p>
-  <p><strong>Highlights:</strong> Grand Mosque, Mutrah Corniche, Wadi Shab, Nizwa Fort, Desert Safari</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="behrain-details" class="tour-section">
-  <h2>Bahrain</h2>
-  <p>Kingdom of Two Seas: F1 Circuit, Bahrain Fort, Manama Souq & pearl diving legacy.</p>
-  <p><strong>Best Time:</strong> November to March</p>
-  <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
-  <p><strong>Price:</strong> ₹44,999 per person</p>
-  <p><strong>Highlights:</strong> Bahrain International Circuit, Qal'at al-Bahrain, Bab Al Bahrain, Al Dar Islands, Tree of Life</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="qatar-details" class="tour-section">
-  <h2>Qatar</h2>
-  <p>Pearl of the Gulf: Doha Corniche, Souq Waqif, Museum of Islamic Art & desert dunes.</p>
-  <p><strong>Best Time:</strong> November to April</p>
-  <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-  <p><strong>Price:</strong> ₹59,999 per person</p>
-  <p><strong>Highlights:</strong> Souq Waqif, Museum of Islamic Art, The Pearl-Qatar, Inland Sea, Desert Safari</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="kuwait-details" class="tour-section">
-  <h2>Kuwait</h2>
-  <p>Gulf Pearl: Kuwait Towers, Grand Mosque, Souk Al-Mubarakiya & Arabian Gulf coast.</p>
-  <p><strong>Best Time:</strong> November to April</p>
-  <p><strong>Duration:</strong> 3 Days / 2 Nights</p>
-  <p><strong>Price:</strong> ₹49,999 per person</p>
-  <p><strong>Highlights:</strong> Kuwait Towers, Grand Mosque, Souk Al-Mubarakiya, Tareq Rajab Museum, Failaka Island</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="egypt-details" class="tour-section">
-  <h2>Egypt</h2>
-  <p>Land of Pharaohs: Pyramids of Giza, Nile Cruise, Luxor Temples & Red Sea diving.</p>
-  <p><strong>Best Time:</strong> October to April</p>
-  <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
-  <p><strong>Price:</strong> ₹79,999 per person</p>
-  <p><strong>Highlights:</strong> Pyramids of Giza, Sphinx, Nile River Cruise, Valley of the Kings, Abu Simbel</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="turkey-details" class="tour-section">
-  <h2>Turkey</h2>
-  <p>Where East Meets West: Istanbul, Cappadocia Hot Air Balloons, Pamukkale & Turkish delight.</p>
-  <p><strong>Best Time:</strong> April to June, September to November</p>
-  <p><strong>Duration:</strong> 8 Days / 7 Nights</p>
-  <p><strong>Price:</strong> ₹89,999 per person</p>
-  <p><strong>Highlights:</strong> Hagia Sophia, Blue Mosque, Cappadocia Balloons, Pamukkale, Ephesus</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="greece-details" class="tour-section">
-  <h2>Greece</h2>
-  <p>Cradle of Civilization: Athens Acropolis, Mykonos Beaches, Meteora Monasteries & Greek salad.</p>
-  <p><strong>Best Time:</strong> April to June, September to October</p>
-  <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
-  <p><strong>Price:</strong> ₹99,999 per person</p>
-  <p><strong>Highlights:</strong> Acropolis of Athens, Mykonos, Meteora, Delphi, Santorini Sunset</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="portugal-details" class="tour-section">
-  <h2>Portugal</h2>
-  <p>Atlantic Soul: Lisbon Trams, Porto Wine, Algarve Cliffs & Pastel de Nata.</p>
-  <p><strong>Best Time:</strong> March to May, September to October</p>
-  <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
-  <p><strong>Price:</strong> ₹94,999 per person</p>
-  <p><strong>Highlights:</strong> Belém Tower, Pena Palace, Douro Valley, Benagil Cave, Alfama District</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="netherlands-details" class="tour-section">
-  <h2>Netherlands</h2>
-  <p>Land of Tulips: Amsterdam Canals, Keukenhof Gardens, Zaanse Schans & Dutch cheese.</p>
-  <p><strong>Best Time:</strong> April to May, September to October</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹1,04,999 per person</p>
-  <p><strong>Highlights:</strong> Anne Frank House, Rijksmuseum, Keukenhof, Giethoorn, Zaanse Schans Windmills</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="belgium-details" class="tour-section">
-  <h2>Belgium</h2>
-  <p>Heart of Europe: Brussels Grand Place, Bruges Canals, Ghent Castles & Belgian chocolate.</p>
-  <p><strong>Best Time:</strong> April to June, September to October</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹94,999 per person</p>
-  <p><strong>Highlights:</strong> Grand Place, Atomium, Bruges Canals, Ghent Altarpiece, Antwerp Diamonds</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="austria-details" class="tour-section">
-  <h2>Austria</h2>
-  <p>Sound of Music: Vienna Palaces, Salzburg Mozart, Hallstatt Lake & Alpine charm.</p>
-  <p><strong>Best Time:</strong> April to June, September to October</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹1,09,999 per person</p>
-  <p><strong>Highlights:</strong> Schönbrunn Palace, Salzburg Old Town, Hallstatt, Melk Abbey, Austrian Alps</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="czechrepublic-details" class="tour-section">
-  <h2>Czech Republic</h2>
-  <p>Fairy Tale Central: Prague Castle, Charles Bridge, Český Krumlov & world’s best beer.</p>
-  <p><strong>Best Time:</strong> May to September</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹84,999 per person</p>
-  <p><strong>Highlights:</strong> Prague Old Town, Charles Bridge, Prague Castle, Český Krumlov, Pilsner Brewery</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="malaysia-details" class="tour-section">
-  <h2>Malaysia</h2>
-  <p>Truly Asia: Petronas Towers, Langkawi Beaches, Batu Caves & Nasi Lemak.</p>
-  <p><strong>Best Time:</strong> March to October</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹54,999 per person</p>
-  <p><strong>Highlights:</strong> Petronas Twin Towers, Batu Caves, Langkawi, Genting Highlands, Malacca</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="singapore-details" class="tour-section">
-  <h2>Singapore</h2>
-  <p>Lion City: Marina Bay Sands, Gardens by the Bay, Sentosa & Chilli Crab.</p>
-  <p><strong>Best Time:</strong> February to April, November to January</p>
-  <p><strong>Duration:</strong> 4 Days / 3 Nights</p>
-  <p><strong>Price:</strong> ₹64,999 per person</p>
-  <p><strong>Highlights:</strong> Marina Bay Sands, Gardens by the Bay, Sentosa, Universal Studios, Changi Airport</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="vietnam-details" class="tour-section">
-  <h2>Vietnam</h2>
-  <p>Timeless Charm: Ha Long Bay Cruise, Hanoi Old Quarter, Hoi An Lanterns & Pho.</p>
-  <p><strong>Best Time:</strong> March to April, September to November</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹52,999 per person</p>
-  <p><strong>Highlights:</strong> Ha Long Bay, Hanoi, Hoi An Ancient Town, Ho Chi Minh City, Mekong Delta</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="southkorea-details" class="tour-section">
-  <h2>South Korea</h2>
-  <p>K-Wave Nation: Seoul Palaces, Busan Beaches, Jeju Island & Korean BBQ.</p>
-  <p><strong>Best Time:</strong> April to June, September to November</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹84,999 per person</p>
-  <p><strong>Highlights:</strong> Gyeongbokgung Palace, N Seoul Tower, Jeju Island, Busan, DMZ Tour</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="thailand-details" class="tour-section">
-  <h2>Thailand</h2>
-  <p>Land of Smiles: Bangkok Temples, Phuket Beaches, Chiang Mai Hills & Krabi Islands.</p>
-  <p><strong>Best Time:</strong> November to March</p>
-  <p><strong>Duration:</strong> 8 Days / 7 Nights</p>
-  <p><strong>Price:</strong> ₹74,999 per person</p>
-  <p><strong>Highlights:</strong> Bangkok Grand Palace, Phi Phi Islands, Chiang Mai Temples, Floating Market, Krabi</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="nepal-details" class="tour-section">
-  <h2>Nepal</h2>
-  <p>Roof of the World: Everest Views, Kathmandu Temples, Pokhara Lakes & Himalayas.</p>
-  <p><strong>Best Time:</strong> October to December, March to May</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹39,999 per person</p>
-  <p><strong>Highlights:</strong> Kathmandu Durbar Square, Pokhara Phewa Lake, Everest Flight, Pashupatinath, Boudhanath</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="bhutan-details" class="tour-section">
-  <h2>Bhutan</h2>
-  <p>Last Shangri-La: Tiger’s Nest Monastery, Thimphu Dzong, Paro Valley & Gross National Happiness.</p>
-  <p><strong>Best Time:</strong> March to May, September to November</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹54,999 per person</p>
-  <p><strong>Highlights:</strong> Tiger’s Nest, Punakha Dzong, Thimphu, Dochula Pass, Paro</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="srilanka-details" class="tour-section">
-  <h2>Sri Lanka</h2>
-  <p>Pearl of Indian Ocean: Sigiriya Rock, Kandy Temple, Galle Fort & Ceylon Tea.</p>
-  <p><strong>Best Time:</strong> December to March, July to September</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹44,999 per person</p>
-  <p><strong>Highlights:</strong> Sigiriya, Kandy, Ella Train Ride, Galle Fort, Yala Safari</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="philippines-details" class="tour-section">
-  <h2>Philippines</h2>
-  <p>Island Paradise: Boracay White Beach, Palawan Underground River & Manila History.</p>
-  <p><strong>Best Time:</strong> November to April</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹59,999 per person</p>
-  <p><strong>Highlights:</strong> Boracay, El Nido Palawan, Chocolate Hills, Cebu, Manila Intramuros</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="cambodia-details" class="tour-section">
-  <h2>Cambodia</h2>
-  <p>Kingdom of Wonder: Angkor Wat Sunrise, Bayon Temple, Phnom Penh & Mekong River.</p>
-  <p><strong>Best Time:</strong> November to March</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹49,999 per person</p>
-  <p><strong>Highlights:</strong> Angkor Wat, Bayon Temple, Ta Prohm, Phnom Penh Royal Palace, Tonle Sap</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="laos-details" class="tour-section">
-  <h2>Laos</h2>
-  <p>Land of a Million Elephants: Luang Prabang Temples, Kuang Si Falls & Mekong Sunset.</p>
-  <p><strong>Best Time:</strong> November to February</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹47,999 per person</p>
-  <p><strong>Highlights:</strong> Luang Prabang, Kuang Si Falls, Vientiane, Plain of Jars, Mekong Cruise</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="uae-details" class="tour-section">
-  <h2>UAE</h2>
-  <p>Futuristic Oasis: Burj Khalifa, Desert Safari, Sheikh Zayed Mosque & Gold Souk.</p>
-  <p><strong>Best Time:</strong> November to March</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹69,999 per person</p>
-  <p><strong>Highlights:</strong> Burj Khalifa, Dubai Mall, Desert Safari, Abu Dhabi Grand Mosque, Ferrari World</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="jordan-details" class="tour-section">
-  <h2>Jordan</h2>
-  <p>Lost City of Stone: Petra Treasury, Wadi Rum Desert, Dead Sea Float & Amman Citadel.</p>
-  <p><strong>Best Time:</strong> March to May, September to November</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹74,999 per person</p>
-  <p><strong>Highlights:</strong> Petra, Wadi Rum, Dead Sea, Jerash, Amman, Aqaba</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="saudiarabia-details" class="tour-section">
-  <h2>Saudi Arabia</h2>
-  <p>Kingdom Rising: AlUla Tombs, Riyadh Boulevard, Jeddah Corniche & Red Sea Projects.</p>
-  <p><strong>Best Time:</strong> October to March</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹79,999 per person</p>
-  <p><strong>Highlights:</strong> AlUla Hegra, Riyadh Sky Bridge, Jeddah Old Town, Edge of the World, Red Sea</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="morocco-details" class="tour-section">
-  <h2>Morocco</h2>
-  <p>Gateway to Africa: Marrakech Souks, Sahara Desert, Chefchaouen Blue City & Atlas Mountains.</p>
-  <p><strong>Best Time:</strong> March to May, September to November</p>
-  <p><strong>Duration:</strong> 7 Days / 6 Nights</p>
-  <p><strong>Price:</strong> ₹79,999 per person</p>
-  <p><strong>Highlights:</strong> Marrakech Medina, Sahara Camel Ride, Chefchaouen, Fes, Casablanca</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="kenya-details" class="tour-section">
-  <h2>Kenya</h2>
-  <p>Safari Capital: Masai Mara Migration, Amboseli Elephants, Nairobi National Park & Indian Ocean.</p>
-  <p><strong>Best Time:</strong> July to October, January to February</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹94,999 per person</p>
-  <p><strong>Highlights:</strong> Masai Mara Safari, Amboseli, Lake Nakuru, Nairobi, Diani Beach</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="tanzania-details" class="tour-section">
-  <h2>Tanzania</h2>
-  <p>Wild Heart of Africa: Serengeti Migration, Kilimanjaro Summit, Ngorongoro Crater & Zanzibar Spice.</p>
-  <p><strong>Best Time:</strong> June to October, January to February</p>
-  <p><strong>Duration:</strong> 8 Days / 7 Nights</p>
-  <p><strong>Price:</strong> ₹1,09,999 per person</p>
-  <p><strong>Highlights:</strong> Serengeti Safari, Kilimanjaro, Ngorongoro Crater, Zanzibar, Lake Manyara</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="ghana-details" class="tour-section">
-  <h2>Ghana</h2>
-  <p>Gateway to West Africa: Cape Coast Castles, Kakum Canopy Walk, Accra Markets & Volta Lake.</p>
-  <p><strong>Best Time:</strong> November to March</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹84,999 per person</p>
-  <p><strong>Highlights:</strong> Accra, Cape Coast Castle, Kakum National Park, Elmina, Mole Safari</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="senegal-details" class="tour-section">
-  <h2>Senegal</h2>
-  <p>West African Soul: Dakar Vibes, Goree Island History, Pink Lake Lac Rose & Sine-Saloum Delta.</p>
-  <p><strong>Best Time:</strong> November to May</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹79,999 per person</p>
-  <p><strong>Highlights:</strong> Dakar, Goree Island, Lake Retba, Saint-Louis, Sine-Saloum</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="croatia-details" class="tour-section">
-  <h2>Croatia</h2>
-  <p>Adriatic Gem: Dubrovnik Walls, Plitvice Lakes, Split Diocletian Palace & Island Hopping.</p>
-  <p><strong>Best Time:</strong> May to September</p>
-  <p><strong>Duration:</strong> 6 Days / 5 Nights</p>
-  <p><strong>Price:</strong> ₹94,999 per person</p>
-  <p><strong>Highlights:</strong> Dubrovnik, Plitvice Lakes, Split, Hvar, Krka Waterfalls</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-<section id="slovenia-details" class="tour-section">
-  <h2>Slovenia</h2>
-  <p>Green Jewel of Europe: Lake Bled Island, Ljubljana Dragon Bridge, Postojna Cave & Julian Alps.</p>
-  <p><strong>Best Time:</strong> May to September</p>
-  <p><strong>Duration:</strong> 5 Days / 4 Nights</p>
-  <p><strong>Price:</strong> ₹89,999 per person</p>
-  <p><strong>Highlights:</strong> Lake Bled, Ljubljana, Postojna Cave, Triglav Park, Piran Coast</p>
-  <a href="https://agoda.tp.st/nCGNRoCl" target="_blank" class="btn">Book on Agoda</a>
-  <br><br>
-  <a href="#top">↑ Back to Top</a>
-</section>
-
-
+document.querySelectorAll('.close-tour-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.closest('.tour-section').style.display = 'none';
+    this.closest('.destination-wrapper').querySelector('.city-card').scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
 </body>
 </html>
