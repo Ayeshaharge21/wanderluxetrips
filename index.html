@@ -2113,17 +2113,6 @@
     return d ? d.name : 'Various';
   }
 
-  function showToursFor(destId){
-    console.log("Clicked destination ID:", destId);
-    const list = tours.filter(t=>t.destId===destId);
-    if(list.length===0){ alert('The destination page is down, go checkout and book your tour! 🌹'); return }
-    renderTours(list);
-  }
-
-  // initial render
-  renderDestinations(destinations, 'destGrid');
-  renderDestinations(indiaList, 'indiaGrid');
-  renderTours(tours);
 
   // Search & filters
   document.getElementById('searchBtn').addEventListener('click', ()=>{
@@ -2176,25 +2165,6 @@
 ">
   This website contains affiliate links. We may earn a commission.
 </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <iframe id="tidio-chat-code" title="Tidio Chat code" style="display: none;"></iframe><div id="tidio-chat" class="needsclick" style="z-index: 999999999 !important; position: fixed; width: 100%; height: 100%; bottom: 0px; right: 0px; pointer-events: none; display: block;"><style>
 /* cyrillic-ext */
@@ -2326,26 +2296,47 @@
 </style></div><tp-tooltip-container id="tooltip" role="tooltip" data-testid="tooltip-container" style="display: none; width: max-content; position: absolute; top: 0px; left: 0px; padding: 6px; z-index: 2147483647;"></tp-tooltip-container><tp-tooltip-container id="tooltip" role="tooltip" data-testid="tooltip-container" style="display: none; width: max-content; position: absolute; top: 0px; left: 0px; padding: 6px; z-index: 2147483647;"></tp-tooltip-container><tp-tooltip-container id="tooltip" role="tooltip" data-testid="tooltip-container" style="display: none; width: max-content; position: absolute; top: 0px; left: 0px; padding: 6px; z-index: 2147483647;"></tp-tooltip-container><tp-tooltip-container id="tooltip" role="tooltip" data-testid="tooltip-container" style="display: none; width: max-content; position: absolute; top: 0px; left: 0px; padding: 6px; z-index: 2147483647;"></tp-tooltip-container>
 
 <script>
-document.querySelectorAll('.view-tour-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    document.querySelectorAll('.tour-section').forEach(sec => {
-      sec.style.display = 'none';
-    });
-    const targetId = this.getAttribute('data-target');
-    const targetSection = document.getElementById(targetId);
-    targetSection.style.display = 'block';
-    setTimeout(() => {
-      targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+// WanderLuxe Accordion - 60 Cities FIX
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Step 1: Page load pe sab tour sections hide kar
+  document.querySelectorAll('.tour-section').forEach(sec => {
+    sec.style.display = 'none';
   });
-});
 
-document.querySelectorAll('.close-tour-btn').forEach(btn => {
-  btn.addEventListener('click', function() {
-    this.closest('.tour-section').style.display = 'none';
-    this.closest('.destination-wrapper').querySelector('.city-card').scrollIntoView({ behavior: 'smooth' });
+  // Step 2: View Tours button ka click
+  document.querySelectorAll('.view-tour-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Pehle sab sections band kar
+      document.querySelectorAll('.tour-section').forEach(sec => {
+        sec.style.display = 'none';
+      });
+      
+      // Clicked wala section khol
+      const targetId = this.getAttribute('data-target');
+      const targetSection = document.getElementById(targetId);
+      if(targetSection) {
+        targetSection.style.display = 'block';
+        targetSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
   });
+
+  // Step 3: Close button ka click
+  document.querySelectorAll('.close-tour-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.closest('.tour-section').style.display = 'none';
+      this.closest('.destination-wrapper').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+  
 });
 </script>
+
 </body>
 </html>
