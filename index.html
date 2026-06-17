@@ -6114,19 +6114,17 @@
   document.getElementById('searchBtn').addEventListener('click', ()=>{
     const q = document.getElementById('q').value.trim().toLowerCase();
     const region = document.getElementById('regionFilter').value;
-    const all = destinations.concat(indialist.map(d=>({ ...d, region:'india' })));
-    const results = all.filter(d=>{
-      if(region && region!=='all' && d.region!==region) return false;
-      if(q==='') return true;
-      return d.name.toLowerCase().includes(q) || (d.tag && d.tag.toLowerCase().includes(q));
-    });
-    if(results.length===0){
-      document.getElementById('destGrid').innerHTML='<div style="color:var(--muted)">No destinations found. Try clearing filters.</div>'; 
-      document.getElementById('indiaGrid').innerHTML=''; 
-      return
-    }
-    renderDestinations(results.filter(r=>r.region && r.region!=='india').slice(0,30), 'destGrid');
-    renderDestinations(results.filter(r=>r.region==='india'), 'indiaGrid');
+   const all = destinations;
+   const results = all.filter(d=>{
+   if(region && region!=='all' && d.region!==region) return false;
+   if(q==='') return true;
+   return d.name.toLowerCase().includes(q) || (d.tag && d.tag.toLowerCase().includes(q));
+   });
+   if(results.length===0){
+   document.getElementById('destGrid').innerHTML='<div style="color:var(--muted)">No destinations found.</div>';
+   return
+  }
+  renderDestinations(results.slice(0,30), 'destGrid');
   });
 });
 
