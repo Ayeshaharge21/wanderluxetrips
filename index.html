@@ -6110,20 +6110,25 @@
 
 
   // Search & filters
+  document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('searchBtn').addEventListener('click', ()=>{
     const q = document.getElementById('q').value.trim().toLowerCase();
     const region = document.getElementById('regionFilter').value;
-    const all = destinations.concat(indiaList.map(d=>({ ...d, region:'india' })));
+    const all = destinations.concat(indialist.map(d=>({ ...d, region:'india' })));
     const results = all.filter(d=>{
       if(region && region!=='all' && d.region!==region) return false;
       if(q==='') return true;
       return d.name.toLowerCase().includes(q) || (d.tag && d.tag.toLowerCase().includes(q));
     });
-    if(results.length===0){ document.getElementById('destGrid').innerHTML='<div style="color:var(--muted)">No destinations found. Try clearing filters.</div>'; document.getElementById('indiaGrid').innerHTML=''; return }
-    // Split: show non-India in top grid, India in India grid
+    if(results.length===0){
+      document.getElementById('destGrid').innerHTML='<div style="color:var(--muted)">No destinations found. Try clearing filters.</div>'; 
+      document.getElementById('indiaGrid').innerHTML=''; 
+      return
+    }
     renderDestinations(results.filter(r=>r.region && r.region!=='india').slice(0,30), 'destGrid');
     renderDestinations(results.filter(r=>r.region==='india'), 'indiaGrid');
   });
+});
 
   // Contact form (Formspree will POST when endpoint replaced)
   document.getElementById('contactForm').addEventListener('submit', (e)=>{
@@ -6334,26 +6339,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-});
-
-  document.getElementById('searchBtn').addEventListener('click', () => {
-  const searchTerm = document.getElementById('q').value.toLowerCase().trim();
-  const regionFilter = document.getElementById('regionFilter').value;
-
-  destinations.forEach(dest => {
-    const card = document.getElementById(`card-${dest.id}`);
-    if (!card) return; // agar card nahi mila to skip kar de
-    
-    const nameMatch = dest.name.toLowerCase().includes(searchTerm);
-    const tagMatch = dest.tag.toLowerCase().includes(searchTerm);
-    const regionMatch = regionFilter === 'all' || dest.region === regionFilter;
-    
-    if ((nameMatch || tagMatch) && regionMatch) {
-      card.style.display = 'block';
-    } else {
-      card.style.display = 'none';
-    }
-  });
 });
 </script>
 
