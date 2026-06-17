@@ -6336,32 +6336,27 @@ document.addEventListener('DOMContentLoaded', function() {
   
 });
 
-  document.getElementById('searchBtn').addEventListener('click', searchPlaces);
-document.getElementById('q').addEventListener('keyup', function(e) {
-  if (e.key === 'Enter') searchPlaces();
-});
-
-function searchPlaces() {
-  let input = document.getElementById('q').value.toLowerCase().trim();
-  let region = document.getElementById('regionFilter').value.toLowerCase();
-  let wrappers = document.querySelectorAll('#destGrid .destination-wrapper'); // tere wrapper ka class
-
-  wrappers.forEach(wrapper => {
-    let card = wrapper.querySelector('.card');
-    let placeName = card.innerText.toLowerCase();
-    let cardRegion = wrapper.querySelector('div:nth-of-type(3)')?.innerText.toLowerCase() || 'all';
-    // Line 241 wala div = 3rd div hai, usme region likha hai
+  document.getElementById('searchBtn').addEventListener('click', () => {
+  const searchTerm = document.getElementById('q').value.toLowerCase().trim();
+  const regionFilter = document.getElementById('regionFilter').value;
+  
+  const allDestinations = [...destinations, ...indialist];
+  
+  allDestinations.forEach(dest => {
+    const card = document.getElementById(`card-${dest.id}`);
+    const nameMatch = dest.name.toLowerCase().includes(searchTerm);
+    const tagMatch = dest.tag.toLowerCase().includes(searchTerm);
+    const regionMatch = regionFilter === 'all' || dest.region === regionFilter;
     
-    let matchText = placeName.includes(input);
-    let matchRegion = (region === 'all' || cardRegion === region);
-    
-    if (matchText && matchRegion) {
-      wrapper.style.display = "";
+    if ((nameMatch || tagMatch) && regionMatch && searchTerm !== '') {
+      card.style.display = 'block';
+    } else if (searchTerm === '') {
+      card.style.display = 'block'; // Search khali ho to sab dikhao
     } else {
-      wrapper.style.display = "none";
+      card.style.display = 'none';
     }
   });
-}
+});
 </script>
 
 </body>
