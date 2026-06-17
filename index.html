@@ -6339,19 +6339,17 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('searchBtn').addEventListener('click', () => {
   const searchTerm = document.getElementById('q').value.toLowerCase().trim();
   const regionFilter = document.getElementById('regionFilter').value;
-  
-  const allDestinations = [...destinations, ...indialist];
-  
-  allDestinations.forEach(dest => {
+
+  destinations.forEach(dest => {
     const card = document.getElementById(`card-${dest.id}`);
+    if (!card) return; // agar card nahi mila to skip kar de
+    
     const nameMatch = dest.name.toLowerCase().includes(searchTerm);
     const tagMatch = dest.tag.toLowerCase().includes(searchTerm);
     const regionMatch = regionFilter === 'all' || dest.region === regionFilter;
     
-    if ((nameMatch || tagMatch) && regionMatch && searchTerm !== '') {
+    if ((nameMatch || tagMatch) && regionMatch) {
       card.style.display = 'block';
-    } else if (searchTerm === '') {
-      card.style.display = 'block'; // Search khali ho to sab dikhao
     } else {
       card.style.display = 'none';
     }
