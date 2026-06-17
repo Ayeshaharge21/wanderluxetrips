@@ -238,7 +238,7 @@
     <h3 style="margin:8px 0 4px 0">Paris, France</h3>
     <div style="color:var(--muted)">Art, cafés & romance</div>
     <div class="meta">
-      <div>europe</div>
+      <div class="region" data-region="europe">europe</div>
       <div><button class="btn view-tour-btn" data-target="paris-details">View Tours</button></div>
     </div>
   </div>
@@ -6335,6 +6335,33 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
 });
+
+  document.getElementById('searchBtn').addEventListener('click', searchPlaces);
+document.getElementById('q').addEventListener('keyup', function(e) {
+  if (e.key === 'Enter') searchPlaces();
+});
+
+function searchPlaces() {
+  let input = document.getElementById('q').value.toLowerCase().trim();
+  let region = document.getElementById('regionFilter').value.toLowerCase();
+  let wrappers = document.querySelectorAll('#destGrid .destination-wrapper'); // tere wrapper ka class
+
+  wrappers.forEach(wrapper => {
+    let card = wrapper.querySelector('.card');
+    let placeName = card.innerText.toLowerCase();
+    let cardRegion = wrapper.querySelector('div:nth-of-type(3)')?.innerText.toLowerCase() || 'all';
+    // Line 241 wala div = 3rd div hai, usme region likha hai
+    
+    let matchText = placeName.includes(input);
+    let matchRegion = (region === 'all' || cardRegion === region);
+    
+    if (matchText && matchRegion) {
+      wrapper.style.display = "";
+    } else {
+      wrapper.style.display = "none";
+    }
+  });
+}
 </script>
 
 </body>
