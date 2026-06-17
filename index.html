@@ -2731,7 +2731,7 @@
        <!-- Shimla, Himachal -->
 <div class="destination-wrapper">
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1581365866271-e803a00a6be7?w=800" alt="Shimla Himachal">
+    <img src="https://th.bing.com/th/id/R.078cf8f6c6f50817878c4b12130c018b?rik=WTBQ4PyT4R72Sg&riu=http%3a%2f%2ffeelindia.org%2fwp-content%2fuploads%2f2015%2f10%2fShimla.jpg&ehk=0mGFjEM802jIDOBNlqdHcEBKoPoSlPDOcOPgJbCV%2bF0%3d&risl=&pid=ImgRaw&r=0" alt="Shimla Himachal">
     <h3 style="margin:8px 0 4px 0">Shimla, Himachal</h3>
     <div style="color:var(--muted)">Mall Road + Kufri + Jakhu Temple</div>
     <div class="meta">
@@ -5886,27 +5886,33 @@
     if(!d) d = indiaList.find(x=>x.id===id);
     return d ? d.name : 'Various';
   }
+ document.addEventListener('DOMContentLoaded', function() {
+  
+  // ...tera accordion wala code upar rahega...
 
-
-  // Search & filters
+  // Search & filters - YE wala naya code yaha paste kar
   function searchPlaces() {
-  let input = document.getElementById('q').value.toLowerCase().trim();
-  let region = document.getElementById('regionFilter').value.toLowerCase();
-  let wrappers = document.querySelectorAll('#destGrid .destination-wrapper');
+    let input = document.getElementById('q').value.toLowerCase().trim();
+    let region = document.getElementById('regionFilter').value.toLowerCase();
+    let wrappers = document.querySelectorAll('#destGrid .destination-wrapper');
 
-  wrappers.forEach(wrapper => {
-    let card = wrapper.querySelector('.card');
-    let placeName = card.querySelector('h3').innerText.toLowerCase();
-    let cardRegion = wrapper.querySelector('.region')?.innerText.toLowerCase() || 'all';
-    
-    let matchText = placeName.includes(input);
-    let matchRegion = (region === 'all' || cardRegion === region);
-    
-    wrapper.style.display = (matchText && matchRegion) ? "" : "none";
-  });
-}
+    wrappers.forEach(wrapper => {
+      let card = wrapper.querySelector('.card');
+      let placeName = card.querySelector('h3').innerText.toLowerCase();
+      let cardRegion = wrapper.querySelector('.region')?.innerText.toLowerCase() || 'all';
+      
+      let matchText = placeName.includes(input);
+      let matchRegion = (region === 'all' || cardRegion === region);
+      
+      wrapper.style.display = (matchText && matchRegion) ? "" : "none";
+    });
+  }
   document.getElementById('q').addEventListener('input', searchPlaces);
-document.getElementById('regionFilter').addEventListener('change', searchPlaces);
+  document.getElementById('regionFilter').addEventListener('change', searchPlaces);
+
+   //Button
+   document.getElementById('searchBtn')?.addEventListener('click', searchPlaces);
+});
   
   // Contact form (Formspree will POST when endpoint replaced)
   document.getElementById('contactForm').addEventListener('submit', (e)=>{
