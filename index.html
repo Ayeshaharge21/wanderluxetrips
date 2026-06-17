@@ -6119,7 +6119,9 @@
    const results = all.filter(d=>{
    if(region && region!=='all' && d.region!==region) return false;
    if(q==='') return true;
-   return d.name.toLowerCase().includes(q) || (d.tag && d.tag.toLowerCase().includes(q));
+   return d.name.toLowerCase().includes(q) 
+    || (d.tag && d.tag.toLowerCase().includes(q))
+    || (d.description && d.description.toLowerCase().includes(q));
    });
    if(results.length===0){
    document.getElementById('destGrid').innerHTML='<div style="color:var(--muted)">No destinations found.</div>';
