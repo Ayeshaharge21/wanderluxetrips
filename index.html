@@ -2677,7 +2677,7 @@
        <!-- Jaipur -->
 <div class="destination-wrapper">
   <div class="card">
-    <img src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800" alt="Jaipur">
+    <img src="https://windows10spotlight.com/wp-content/uploads/2021/02/b6fd258c51c61dd2077fe5fec40ceae4.jpg" alt="Jaipur">
     <h3 style="margin:8px 0 4px 0">Jaipur</h3>
     <div style="color:var(--muted)">Hawa Mahal + Amber Fort + City Palace</div>
     <div class="meta">
@@ -6111,26 +6111,22 @@
 
 
   // Search & filters
-  document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('searchBtn').addEventListener('click', ()=>{
-    const q = document.getElementById('q').value.trim().toLowerCase();
-    const region = document.getElementById('regionFilter').value;
-   const all = destinations;
-   const results = all.filter(d=>{
-   if(region && region!=='all' && d.region!==region) return false;
-   if(q==='') return true;
-   return d.name.toLowerCase().includes(q) 
-    || (d.tag && d.tag.toLowerCase().includes(q))
-    || (d.description && d.description.toLowerCase().includes(q));
-   });
-   if(results.length===0){
-   document.getElementById('destGrid').innerHTML='<div style="color:var(--muted)">No destinations found.</div>';
-   return
-  }
-  renderDestinations(results.slice(0,30), 'destGrid');
-  });
-});
+  function searchPlaces() {
+  let input = document.getElementById('q').value.toLowerCase().trim();
+  let region = document.getElementById('regionFilter').value.toLowerCase();
+  let wrappers = document.querySelectorAll('#destGrid .destination-wrapper');
 
+  wrappers.forEach(wrapper => {
+    let card = wrapper.querySelector('.card');
+    let placeName = card.innerText.toLowerCase();
+    let cardRegion = wrapper.querySelector('.region')?.getAttribute('data-region') || 'all';
+    
+    let matchText = placeName.includes(input);
+    let matchRegion = (region === 'all' || cardRegion === region);
+    
+    wrapper.style.display = (matchText && matchRegion) ? "" : "none";
+  });
+}
   // Contact form (Formspree will POST when endpoint replaced)
   document.getElementById('contactForm').addEventListener('submit', (e)=>{
     setTimeout(()=>{ alert('Thank you — your message was sent (if Formspree is configured).') }, 300);
