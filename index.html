@@ -180,6 +180,47 @@
   margin-bottom: 30px;
 }
 
+    <style>
+/* Desktop Menu */
+.navbar {
+  display: flex;
+  gap: 20px;
+  background: #003580;
+  padding: 15px;
+}
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Mobile Hamburger Hidden on Desktop */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  background: #003580;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .hamburger { display: block; } /* Show 3 lines icon */
+  
+  .navbar { 
+    display: none; /* Hide menu by default */
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar.show { display: flex; } /* Show when clicked */
+  
+  .navbar a {
+    padding: 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+  }
+}
+</style>
 
     @media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.hero-right img{height:200px}}
     @media(max-width:640px){.grid{grid-template-columns:1fr}.contact-form{grid-template-columns:1fr}.main-nav{display:none}}
@@ -206,6 +247,7 @@
         </div>
       </div>
 
+       <button class="menu-toggle" aria-label="Open menu">☰</button>
       <nav class="main-nav">
         <a href="#dest">Destinations</a>
         <a href="#india">Incredible India</a>
@@ -6070,7 +6112,7 @@ Receive <b>11% off</b> any AirHelp+ plan with promo code: <b>AHTPO11</b><br>
   // Replace with your Travelpayouts or Agoda & Klook affiliate link when ready.
   // Travelpayouts sample will look like: https://tp.media/r?marker=XXXX&p=Agoda & Klook
   const AFFILIATE_BASE = 'https://www.Agoda & Klook/?aid=YOUR_AID_HERE';
-
+  
   function renderTours(list){
     const tourList = document.getElementById('tourList');
     tourList.innerHTML = '';
