@@ -180,48 +180,68 @@
   margin-bottom: 30px;
 }
 
-    <style>
-/* Desktop Menu */
+/* Desktop Menu - Theek hai */
 .navbar {
   display: flex;
   gap: 20px;
   background: #003580;
   padding: 15px;
+  align-items: center;
 }
 .navbar a {
   color: white;
   text-decoration: none;
   font-weight: 600;
+  white-space: nowrap; /* Tootega nahi */
 }
 
-/* Mobile Hamburger Hidden on Desktop */
+/* Hamburger Hide on Desktop */
 .hamburger {
   display: none;
   font-size: 28px;
   color: white;
   cursor: pointer;
-  padding: 15px;
+  padding: 10px 15px;
   background: #003580;
+  border: none;
 }
 
-/* Mobile View */
+/* MOBILE VIEW - YE PURA BADAL DO */
 @media (max-width: 768px) {
-  .hamburger { display: block; } /* Show 3 lines icon */
+  header {
+    flex-direction: row; /* Logo aur button ek line mein */
+    justify-content: space-between; /* Dono side corner */
+    align-items: center;
+    padding: 10px 15px;
+  }
+  
+  .hamburger { 
+    display: block; /* Show 3 lines icon */
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
   
   .navbar { 
     display: none; /* Hide menu by default */
-    flex-direction: column;
+    flex-direction: column; /* Neeche neeche */
     width: 100%;
+    position: absolute;
+    top: 60px; /* Header ke neeche */
+    left: 0;
+    background: #003580;
+    z-index: 999;
   }
-  .navbar.show { display: flex; } /* Show when clicked */
+  
+  .navbar.show { display: flex; } /* Click pe show */
   
   .navbar a {
-    padding: 12px;
-    border-top: 1px solid rgba(255,255,255,0.2);
+    padding: 14px 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    width: 100%;
   }
 }
 </style>
-
     
     
 <script src="chrome-extension://kcbkloeogbimjlofcbhehlakjmmnlhhn/assets/inject.js"></script><script type="module" async="" src="//emrldtp.cc/chunk.BxHDf6Rv.js"></script><link rel="preload" href="https://code.tidio.co/widget-v4/fonts/inter_UcCo3FwrK3iLTcviYwYZ8UA3.woff2" as="font" type="font/woff2" crossorigin=""><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..600&amp;family=Roboto:wght@400..600&amp;display=swap"><link rel="stylesheet" crossorigin="" href="https://emrldtp.cc/assets/index-DX-4Xm2D.css">
@@ -245,8 +265,9 @@
         </div>
       </div>
 
-       <button class="menu-toggle" aria-label="Open menu">☰</button>
-      <nav class="main-nav">
+       <div class="hamburger" onclick="document.querySelector('.navbar').classList.toggle('show')">☰</div>
+
+      <nav class="navbar"> 
         <a href="#dest">Destinations</a>
         <a href="#india">Incredible India</a>
         <a href="#blog">Blog</a>
@@ -255,7 +276,7 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         
-        <a class="cta" id="bookTopBtn" href="#https://agoda.tp.st/nCGNRoCl">Book</a>
+        <a class="cta" id="bookTopBtn" href="https://agoda.tp.st/nCGNRoCl">Book</a>
         <button id="themeToggle" aria-label="Toggle theme">🌗</button>
       </nav>
     </header>
