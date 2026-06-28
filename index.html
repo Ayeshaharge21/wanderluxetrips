@@ -241,6 +241,50 @@
     width: 100%;
   }
 }
+
+      /* ===== CARDS MOBILE = 1 PER LINE ===== */
+  .cards {
+    grid-template-columns: 1fr !important; /* 1 card only */
+    gap: 16px;
+    padding: 0 16px;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+
+  .card img {
+    height: 200px; /* Badi image */
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .card h3 {
+    font-size: 18px;
+    padding: 14px 16px 4px;
+    margin: 0;
+  }
+  
+  .card p {
+    font-size: 14px;
+    padding: 0 16px 12px;
+    margin: 0;
+    color: var(--muted);
+  }
+
+  .card .btn {
+    margin: 0 16px 16px;
+    padding: 12px;
+    width: calc(100% - 32px); /* Full width button */
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+/* ===== @media end ===== */
 </style>
     
     
